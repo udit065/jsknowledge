@@ -1,20 +1,35 @@
-import React from 'react'
-// import { Link } from 'react-router'
+import React, { useEffect, useState } from 'react';
 
 const Javascript = () => {
+    const [jsQuestions, setJsQuestions] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            fetch('/data/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    setJsQuestions(data[0].data);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        };
+        fetchData();
+    }, []);
+
+    console.log('jsQuestions', jsQuestions);
+
     return (
         <>
-            {/* <Link to="/"> */}
-            <div
-                className="h-[16em] w-[18em] border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.01)] text-white font-nunito p-[1em] flex justify-center items-left flex-col gap-[0.75em] backdrop-blur-[12px]"
-            >
-                <div>
-                    <h1 className="text-[2em] font-medium text-center">Javascript</h1>
-                </div>
+            <h1 className="text-[2em] font-medium text-center">Javascript</h1>
+            <div>
+                {jsQuestions.map((questionObj) => (
+                    <div key={questionObj.id}>
+                        <h2>{questionObj.question}</h2>
+                        <p>{questionObj.answer}</p>
+                    </div>
+                ))}
             </div>
-            {/* </Link> */}
         </>
-    )
-}
+    );
+};
 
-export default Javascript
+export default Javascript;

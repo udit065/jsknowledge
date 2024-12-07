@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "javascript",
+        "data": [
+            {
+                "id": 1,
+                "question": "What is closure in JavaScript?",
+                "answer": "A closure in JavaScript is a function that has access to the variables and parameters of its outer function, even after the outer function has finished executing."
+            },
+            {
+                "id": 2,
+                "question": "What is the diffe1065rence between `var`, `let`, and `const`?",
+                "answer": "`var` is function-scoped and can be redeclared. `let` is block-scoped and cannot be redeclared in the same scope. `const` is block-scoped and must be assigned a value at declaration, and its value cannot be reassigned."
+            },
+            {
+                "id": 3,
+                "question": "What is a promise in JavaScript?",
+                "answer": "A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value."
+            },
+            {
+                "id": 4,
+                "question": "What is the difference between `==` and `===`?",
+                "answer": "`==` is the loose equality operator, which performs type coercion. `===` is the strict equality operator, which checks both value and type without type coercion."
+            },
+            {
+                "id": 5,
+                "question": "What are arrow functions?",
+                "answer": "Arrow functions provide a shorter syntax for writing functions. They also do not have their own `this`, instead inheriting it from the enclosing context."
+            },
+            {
+                "id": 6,
+                "question": "What is event delegation?",
+                "answer": "Event delegation is a technique of handling events by attaching a single event listener to a parent element, which will listen for events on its child elements."
+            },
+            {
+                "id": 7,
+                "question": "What is the `this` keyword in JavaScript?",
+                "answer": "`this` refers to the context in which a function is executed, and its value depends on how the function is called (e.g., object method, event handler, etc.)."
+            },
+            {
+                "id": 8,
+                "question": "What is hoisting in JavaScript?",
+                "answer": "Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase, but only the declarations, not the assignments."
+            },
+            {
+                "id": 9,
+                "question": "What is the `bind()` method in JavaScript?",
+                "answer": "`bind()` creates a new function that, when called, has its `this` value set to the provided value, and prepends any given arguments to the function’s arguments."
+            },
+            {
+                "id": 10,
+                "question": "What are template literals in JavaScript?",
+                "answer": "Template literals are a feature in JavaScript that allow embedded expressions within string literals using backticks (``) and `${}` for interpolation of variables or expressions."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "react"
+    }
+]

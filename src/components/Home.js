@@ -17,7 +17,7 @@ const Home = () => {
                             <Link to={path[index]}>
                                 <div
                                     key={index}
-                                    className="h-[16em] w-[18em] border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.01)] text-white font-nunito p-[1em] flex justify-center items-left flex-col gap-[0.75em] backdrop-blur-[12px] cursor-pointer"
+                                    className="h-[16em] w-[18em] border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.01)] text-white p-[1em] flex justify-center items-left flex-col gap-[0.75em] backdrop-blur-[12px] cursor-pointer"
                                 >
                                     <h1 className="text-[2em] font-medium text-center">{elm}</h1>
                                 </div>
