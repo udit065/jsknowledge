@@ -1,17 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import Sidebar from '../sidebar/Sidebar';
 
 const Css = () => {
-    return (
-        <>
-            <div
-                className="h-[16em] w-[18em] border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.01)] text-white font-nunito p-[1em] flex justify-center items-left flex-col gap-[0.75em] backdrop-blur-[12px]"
-            >
-                <div>
-                    <h1 className="text-[2em] font-medium text-center">CSS</h1>
-                </div>
-            </div>
-        </>
-    )
-}
+    const [cssQuestions, setCssQuestions] = useState([]);
 
-export default Css
+    useEffect(() => {
+        const fetchData = async () => {
+            fetch('/data/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    setCssQuestions(data[3].data);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        };
+        fetchData();
+    }, []);
+
+    return (
+        <div className='bg-black text-white min-h-screen'>
+            <div>
+                <Sidebar />
+            </div>
+            <div className='ml-80 pt-10'>
+                {cssQuestions.map((questionObj) => (
+                    <div key={questionObj.id}>
+                        <h2 className='font-bold text-2xl'>{questionObj.question}</h2>
+                        <p className='font-semibold text-xl p-4'>{questionObj.answer}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Css;

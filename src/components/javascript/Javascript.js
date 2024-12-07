@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Sidebar from '../sidebar/Sidebar';
 
 const Javascript = () => {
     const [jsQuestions, setJsQuestions] = useState([]);
@@ -15,20 +16,20 @@ const Javascript = () => {
         fetchData();
     }, []);
 
-    console.log('jsQuestions', jsQuestions);
-
     return (
-        <>
-            <h1 className="text-[2em] font-medium text-center">Javascript</h1>
+        <div className='bg-black text-white min-h-screen'>
             <div>
+                <Sidebar />
+            </div>
+            <div className='ml-80 pt-10'>
                 {jsQuestions.map((questionObj) => (
                     <div key={questionObj.id}>
-                        <h2>{questionObj.question}</h2>
-                        <p>{questionObj.answer}</p>
+                        <h2 className='font-bold text-2xl'>{questionObj.question}</h2>
+                        <p className='font-semibold text-xl p-4'>{questionObj.answer}</p>
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 

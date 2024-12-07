@@ -10,7 +10,7 @@
             },
             {
                 "id": 2,
-                "question": "What is the diffe1065rence between `var`, `let`, and `const`?",
+                "question": "What is the difference between `var`, `let`, and `const`?",
                 "answer": "`var` is function-scoped and can be redeclared. `let` is block-scoped and cannot be redeclared in the same scope. `const` is block-scoped and must be assigned a value at declaration, and its value cannot be reassigned."
             },
             {
@@ -57,6 +57,120 @@
     },
     {
         "id": 2,
-        "name": "react"
+        "name": "react",
+        "data": [
+            {
+                "id": 1,
+                "question": "What is React?",
+                "answer": "React is a JavaScript library for building user interfaces, particularly single-page applications, by creating reusable UI components."
+            },
+            {
+                "id": 2,
+                "question": "What is JSX?",
+                "answer": "JSX is a syntax extension for JavaScript that looks similar to HTML and is used in React to describe UI elements."
+            },
+            {
+                "id": 3,
+                "question": "What are components in React?",
+                "answer": "Components are reusable pieces of UI in React. They can be class-based or functional and allow developers to break down complex interfaces into smaller parts."
+            },
+            {
+                "id": 4,
+                "question": "What is state in React?",
+                "answer": "State is an object managed within a component that determines its behavior and how it renders. State changes trigger re-renders."
+            },
+            {
+                "id": 5,
+                "question": "What are props in React?",
+                "answer": "Props (short for properties) are read-only inputs passed from parent to child components to customize or configure them."
+            },
+            {
+                "id": 6,
+                "question": "What is the Virtual DOM?",
+                "answer": "The Virtual DOM is a lightweight copy of the real DOM that React uses to optimize UI rendering by updating only the necessary parts of the actual DOM."
+            },
+            {
+                "id": 7,
+                "question": "What is the difference between state and props?",
+                "answer": "State is mutable and managed within the component, while props are immutable and passed to components by their parent."
+            },
+            {
+                "id": 8,
+                "question": "What are React hooks?",
+                "answer": "Hooks are functions introduced in React 16.8 that allow developers to use state and other React features in functional components."
+            },
+            {
+                "id": 9,
+                "question": "What is the useEffect hook?",
+                "answer": "The `useEffect` hook is used to perform side effects, such as data fetching or subscriptions, in functional components."
+            },
+            {
+                "id": 10,
+                "question": "What is React Router?",
+                "answer": "React Router is a library for managing navigation and routing in React applications, allowing developers to create single-page applications with dynamic URLs."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "html",
+        "data": [
+            {
+                "id": 1,
+                "question": "What is HTML?",
+                "answer": "HTML (HyperText Markup Language) is the standard language for creating web pages and applications."
+            },
+            {
+                "id": 2,
+                "question": "What are semantic HTML elements?",
+                "answer": "Semantic HTML elements clearly define their meaning in a human-readable way, such as `<header>`, `<footer>`, `<article>`, and `<section>`."
+            },
+            {
+                "id": 3,
+                "question": "What is the purpose of the `<DOCTYPE>` declaration?",
+                "answer": "The `<DOCTYPE>` declaration specifies the HTML version and type, ensuring the browser renders the document in standards mode."
+            },
+            {
+                "id": 4,
+                "question": "What is the difference between `<div>` and `<span>`?",
+                "answer": "`<div>` is a block-level element used for layout, while `<span>` is an inline element used for styling specific parts of text."
+            },
+            {
+                "id": 5,
+                "question": "What is the difference between `id` and `class` attributes in HTML?",
+                "answer": "`id` is unique and used for identifying a single element, while `class` can be shared among multiple elements for styling and grouping."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "css",
+        "data": [
+            {
+                "id": 1,
+                "question": "What is CSS?",
+                "answer": "CSS (Cascading Style Sheets) is used to style and layout HTML elements, including colors, fonts, and spacing."
+            },
+            {
+                "id": 2,
+                "question": "What are the different types of CSS?",
+                "answer": "The three types of CSS are Inline CSS, Internal CSS, and External CSS."
+            },
+            {
+                "id": 3,
+                "question": "What is the difference between `relative`, `absolute`, and `fixed` positioning in CSS?",
+                "answer": "`relative` positions an element relative to its normal position, `absolute` positions it relative to its nearest positioned ancestor, and `fixed` positions it relative to the viewport."
+            },
+            {
+                "id": 4,
+                "question": "What is a CSS pseudo-class?",
+                "answer": "A CSS pseudo-class is used to define the special state of an element, such as `:hover`, `:nth-child()`, or `:focus`."
+            },
+            {
+                "id": 5,
+                "question": "What is the difference between `em` and `rem` in CSS?",
+                "answer": "`em` is relative to the font-size of the parent element, while `rem` is relative to the font-size of the root element."
+            }
+        ]
     }
 ]

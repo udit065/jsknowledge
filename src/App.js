@@ -19,43 +19,6 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
-    // <div className="bg-black text-white min-w-screen min-h-screen">
-    //   <div className='mb-8'>
-    //     <p className='text-3xl font-bold text-center'>Interview Questions</p>
-    //   </div>
-    //   <div className=' flex flex-wrap'>
-    //     <div className='m-10'>
-    //       <Javascript />
-    //     </div>
-    //     <div className='m-10'>
-    //       <ReactData />
-    //     </div>
-    //     <div className='m-10'>
-    //       <Html />
-    //     </div>
-    //     <div className='m-10'>
-    //       <Css />
-    //     </div>
-    //     <div className='m-10'>
-    //       <Css /> {/* //ANCHOR -Internet */}
-    //     </div>
-    //     <div className='m-10'>
-    //       <Css /> {/* //ANCHOR -Nextjs */}
-    //     </div>
-    //     <div className='m-10'>
-    //       <Css /> {/* //ANCHOR -MogoDb */}
-    //     </div>
-    //     <div className='m-10'>
-    //       <Css /> {/* //ANCHOR -SQL */}
-    //     </div>
-    //     <div className='m-10'>
-    //       <Css /> {/* //ANCHOR -tailwind css */}
-    //     </div>
-    //     <div className='m-10'>
-    //       <Css /> {/* //ANCHOR -middleware */}
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
