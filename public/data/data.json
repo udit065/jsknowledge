@@ -637,6 +637,206 @@
                 "id": 127,
                 "question": "Q8. What are alternatives to callbacks for handling asynchronous operations?",
                 "answer": "Alternatives to callbacks include Promises and `async/await`. Promises allow chaining of asynchronous operations, and `async/await` provides a more synchronous-looking syntax for handling asynchronous code, both avoiding callback hell and improving readability."
+            },
+            {
+                "id": 128,
+                "question": "Q29. What is a promise in JavaScript, and how does it work?",
+                "answer": "A Promise in JavaScript represents a value that may be available now, or in the future, or never. It is used to handle asynchronous operations. A promise can be in one of three states: Pending, Fulfilled, or Rejected."
+            },
+            {
+                "id": 129,
+                "question": "Q30. How do you create a promise in JavaScript?",
+                "answer": "To create a promise, you use the `Promise` constructor, passing in an executor function that takes `resolve` and `reject` functions as arguments.\n\nExample:\n```javascript\nlet promise = new Promise((resolve, reject) => {\n  let success = true;\n  if (success) resolve('Success!');\n  else reject('Failure!');\n});\n```"
+            },
+            {
+                "id": 130,
+                "question": "Q31. What is the purpose of `resolve()` and `reject()` in JavaScript promises?",
+                "answer": "`resolve()` is used to fulfill a promise when an asynchronous operation is successful, and `reject()` is used to reject a promise when an error or failure occurs."
+            },
+            {
+                "id": 131,
+                "question": "Q32. How do you handle a resolved promise in JavaScript?",
+                "answer": "A resolved promise can be handled using the `.then()` method, which is invoked when the promise is fulfilled.\n\nExample:\n```javascript\npromise.then(result => console.log(result));\n```"
+            },
+            {
+                "id": 132,
+                "question": "Q33. What is `async/await` in JavaScript, and how does it work?",
+                "answer": "`async/await` is a syntax for working with promises that makes asynchronous code look and behave more like synchronous code. An `async` function always returns a promise, and `await` can be used to pause the execution of the function until the promise is resolved."
+            },
+            {
+                "id": 133,
+                "question": "Q34. What are the types of promises in JavaScript?",
+                "answer": "There are three main states of promises: Pending (the initial state), Fulfilled (the operation completed successfully), and Rejected (the operation failed). Promises also include utility methods like `Promise.all()` and `Promise.race()`."
+            },
+            {
+                "id": 134,
+                "question": "Q35. What is `Promise.all()` in JavaScript, and how is it used?",
+                "answer": "`Promise.all()` is used to execute multiple promises concurrently and returns a single promise that resolves when all the input promises have resolved or rejects if any of the promises fail."
+            },
+            {
+                "id": 135,
+                "question": "Q36. What is the `Promise.race()` method used for?",
+                "answer": "`Promise.race()` takes an array of promises and returns a promise that resolves or rejects as soon as one of the promises in the array resolves or rejects."
+            },
+            {
+                "id": 136,
+                "question": "Q37. What is the difference between `setTimeout()` and `setInterval()` in JavaScript?",
+                "answer": "`setTimeout()` is used to execute a function after a specified delay once, whereas `setInterval()` is used to repeatedly execute a function at the specified interval until stopped."
+            },
+            {
+                "id": 137,
+                "question": "Q38. How do you clear a timeout or interval in JavaScript?",
+                "answer": "You can clear a timeout or interval by calling `clearTimeout()` or `clearInterval()` and passing the identifier returned by `setTimeout()` or `setInterval()`.\n\nExample:\n```javascript\nlet timeoutID = setTimeout(() => console.log('Hello!'), 1000);\nclearTimeout(timeoutID);\n```"
+            },
+            {
+                "id": 138,
+                "question": "Q39. How do you handle asynchronous code in JavaScript?",
+                "answer": "Asynchronous code in JavaScript is typically handled using callbacks, Promises, or the `async/await` syntax, where Promises are a more modern and preferred approach for managing asynchronous operations."
+            },
+            {
+                "id": 139,
+                "question": "Q40. What is a promise chain, and how do you handle errors in promise chains?",
+                "answer": "A promise chain is a sequence of promises where each `.then()` returns a new promise. You can handle errors in a promise chain using `.catch()` at the end of the chain to catch any rejected promise."
+            },
+            {
+                "id": 140,
+                "question": "Q41. Explain the three states of a Promise: Pending, Fulfilled, and Rejected.",
+                "answer": "A Promise can be in three states:\n- Pending: The promise is neither fulfilled nor rejected, and the operation is still in progress.\n- Fulfilled: The promise has been resolved successfully.\n- Rejected: The promise has failed due to an error."
+            },
+            {
+                "id": 141,
+                "question": "Q42. What is the difference between `.then()` and `.catch()` in a Promise?",
+                "answer": "`then()` is used to handle the fulfillment of a promise, while `.catch()` is used to handle the rejection (error) of a promise."
+            },
+            {
+                "id": 142,
+                "question": "Q43. How do you handle multiple asynchronous operations using Promises?",
+                "answer": "You can handle multiple asynchronous operations using `Promise.all()`, which resolves when all promises are fulfilled, or `Promise.race()`, which resolves as soon as one promise is fulfilled."
+            },
+            {
+                "id": 143,
+                "question": "Q44. Discuss chaining Promises and error handling with `.catch()`.",
+                "answer": "Promise chaining allows you to perform sequential asynchronous operations. You can use `.catch()` to handle any errors that occur in the chain.\n\nExample:\n```javascript\npromise1.then(result => result + 1)\n  .then(result2 => result2 * 2)\n  .catch(error => console.log(error));\n```"
+            },
+            {
+                "id": 144,
+                "question": "Q45. What happens if you return a value from a `.then()` handler?",
+                "answer": "If you return a value from a `.then()` handler, that value will be automatically wrapped in a resolved promise and passed to the next `.then()` in the chain."
+            },
+            {
+                "id": 145,
+                "question": "Q46. Explain how the value is passed to the next `.then()`.",
+                "answer": "When a `.then()` handler returns a value, that value is automatically wrapped in a promise and passed to the next `.then()` in the chain. If the returned value is already a promise, the chain will wait for it to resolve before proceeding."
+            },
+            {
+                "id": 146,
+                "question": "Q47. What is the purpose of `Promise.resolve()` and `Promise.reject()`?",
+                "answer": "`Promise.resolve()` is used to create a promise that is immediately fulfilled, while `Promise.reject()` creates a promise that is immediately rejected, both of which are useful for quick resolution or rejection in promise chains."
+            },
+            {
+                "id": 147,
+                "question": "Q48. What happens if one of the Promises passed to `Promise.all()` fails?",
+                "answer": "If one of the promises passed to `Promise.all()` fails, the entire `Promise.all()` operation is rejected with the error from the first failed promise, and the remaining promises are ignored."
+            },
+            {
+                "id": 148,
+                "question": "Q49. How does `Promise.all()` handle errors, and how does it resolve when all Promises succeed?",
+                "answer": "`Promise.all()` resolves when all promises are fulfilled and returns an array of results. If any promise rejects, it immediately rejects with the error from the first rejected promise."
+            },
+            {
+                "id": 149,
+                "question": "Q50. What happens when one of the Promises passed to `Promise.race()` resolves or rejects first?",
+                "answer": "`Promise.race()` resolves or rejects as soon as the first promise in the array resolves or rejects. It does not wait for all promises to settle."
+            },
+            {
+                "id": 150,
+                "question": "Q51. What are practical use cases for `Promise.all()` and `Promise.race()`?",
+                "answer": "`Promise.all()` is useful when you need to wait for multiple promises to complete before proceeding. `Promise.race()` is useful when you want to act on the first promise to resolve or reject, such as with timeouts."
+            },
+            {
+                "id": 151,
+                "question": "Q52. Compare the behavior of Promises and `async/await`.",
+                "answer": "Promises are used to handle asynchronous operations and support chaining, while `async/await` is a more modern approach that allows asynchronous code to be written in a synchronous-like manner, improving readability."
+            },
+            {
+                "id": 152,
+                "question": "Q53. How does error handling work with `async/await`?",
+                "answer": "Error handling with `async/await` is done using `try...catch` blocks. Any error that occurs within the `async` function is caught by the `catch` block."
+            },
+            {
+                "id": 153,
+                "question": "Q54. Can you use `await` outside an `async` function? What happens if you do?",
+                "answer": "No, you cannot use `await` outside of an `async` function. If you do, it will result in a syntax error."
+            },
+            {
+                "id": 154,
+                "question": "Q55. How does the event loop handle asynchronous code?",
+                "answer": "The event loop handles asynchronous code by processing tasks in the message queue after the call stack is empty. It processes microtasks (e.g., promises) before macrotasks (e.g., `setTimeout()`)."
+            },
+            {
+                "id": 155,
+                "question": "Q56. What is the difference between microtasks and macrotasks in the event loop?",
+                "answer": "Microtasks (e.g., promises) are executed before macrotasks (e.g., `setTimeout()`, I/O operations). The event loop first clears the microtask queue before processing the macrotask queue."
+            },
+            {
+                "id": 156,
+                "question": "Q57. How does `async/await` internally work, and how does it relate to Promises?",
+                "answer": "`async/await` is syntactic sugar for working with Promises. When an `await` expression is used, it pauses the execution of the async function until the Promise is resolved, effectively handling asynchronous code like synchronous code."
+            },
+            {
+                "id": 157,
+                "question": "Q58. What is the purpose of `Promise.finally()`, and when should it be used?",
+                "answer": "`Promise.finally()` is used to specify a callback function that is executed after a promise is settled, regardless of whether it was resolved or rejected. It is often used for cleanup tasks or to finalize operations that should occur no matter the outcome of the promise."
+            },
+            {
+                "id": 159,
+                "question": "Q59. How would you implement a custom asynchronous control flow pattern, such as throttling or debouncing?",
+                "answer": "To implement throttling, you can create a function that ensures a callback is only called once in a specified time interval. This can be done using `setTimeout` to limit the rate of function execution. For debouncing, you can use a `setTimeout` function that resets each time the event is triggered, ensuring the callback is only called after a specified delay. Throttling controls the execution frequency, while debouncing ensures the function runs only after the user stops triggering events for a specified time."
+            },
+            {
+                "id": 160,
+                "question": "Q60. What is the event loop in JavaScript?",
+                "answer": "The event loop is a mechanism in JavaScript that allows asynchronous code execution. It continually checks the call stack and message queue, executing functions in the call stack while ensuring asynchronous tasks are processed in the right order."
+            },
+            {
+                "id": 161,
+                "question": "Q61. Explain the event loop’s role in managing asynchronous code execution.",
+                "answer": "The event loop handles the execution of asynchronous code by checking the call stack and moving events from the message queue to the call stack once the stack is clear, ensuring tasks are executed in the correct order without blocking the main thread."
+            },
+            {
+                "id": 162,
+                "question": "Q62. What is the difference between the call stack and the message queue?",
+                "answer": "The call stack holds the functions currently being executed, while the message queue holds events and their corresponding callbacks waiting to be executed. The event loop moves tasks from the queue to the stack when it is clear."
+            },
+            {
+                "id": 163,
+                "question": "Q63. Discuss how the event loop uses the call stack, message queue, and the event loop itself.",
+                "answer": "The event loop works by continuously checking the call stack. If it's empty, it moves the next task from the message queue to the stack for execution. The message queue stores events (like user inputs or completed promises) that are waiting to be processed."
+            },
+            {
+                "id": 164,
+                "question": "Q64. What is the difference between synchronous and asynchronous code in terms of the event loop?",
+                "answer": "Synchronous code blocks the call stack until it finishes execution, while asynchronous code is placed in the message queue and waits for the call stack to be empty before being executed, allowing other tasks to run concurrently."
+            },
+            {
+                "id": 165,
+                "question": "Q65. What happens when a synchronous code block takes too long to execute?",
+                "answer": "When synchronous code takes too long, it blocks the call stack, causing the event loop to wait and delaying the execution of asynchronous tasks, which can lead to UI freezes or unresponsiveness in applications."
+            },
+            {
+                "id": 166,
+                "question": "Q66. Discuss the impact of long-running synchronous code on the event loop and potential UI freezing.",
+                "answer": "Long-running synchronous code can block the event loop, causing a delay in processing other tasks. This leads to UI freezing because the browser cannot process user inputs or update the interface while the call stack is occupied."
+            },
+            {
+                "id": 167,
+                "question": "Q67. How do microtasks and macro-tasks affect the event loop?",
+                "answer": "Microtasks (such as promises) have a higher priority than macro-tasks (such as `setTimeout()`). After each task in the call stack, the event loop checks the microtask queue and executes any microtasks before moving to the next macro-task."
+            },
+            {
+                "id": 168,
+                "question": "Q68. What is the role of `setTimeout()` and `setInterval()` in the event loop?",
+                "answer": "`setTimeout()` and `setInterval()` are macro-tasks that are scheduled to run after a specified delay. These functions place their callbacks into the message queue, where they will be executed once the call stack is empty and microtasks are processed."
             }
         ]
     },
