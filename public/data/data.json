@@ -5,53 +5,638 @@
         "data": [
             {
                 "id": 1,
-                "question": "What is closure in JavaScript?",
+                "question": "Q1. What is closure in JavaScript?",
                 "answer": "A closure in JavaScript is a function that has access to the variables and parameters of its outer function, even after the outer function has finished executing."
             },
             {
                 "id": 2,
-                "question": "What is the difference between `var`, `let`, and `const`?",
+                "question": "Q2. What is the difference between `var`, `let`, and `const`?",
                 "answer": "`var` is function-scoped and can be redeclared. `let` is block-scoped and cannot be redeclared in the same scope. `const` is block-scoped and must be assigned a value at declaration, and its value cannot be reassigned."
             },
             {
                 "id": 3,
-                "question": "What is a promise in JavaScript?",
+                "question": "Q3. What is a promise in JavaScript?",
                 "answer": "A promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value."
             },
             {
                 "id": 4,
-                "question": "What is the difference between `==` and `===`?",
-                "answer": "`==` is the loose equality operator, which performs type coercion. `===` is the strict equality operator, which checks both value and type without type coercion."
+                "question": "Q4. What is JavaScript?",
+                "answer": "JavaScript is a versatile, high-level programming language primarily used to create interactive and dynamic web content."
             },
             {
                 "id": 5,
-                "question": "What are arrow functions?",
-                "answer": "Arrow functions provide a shorter syntax for writing functions. They also do not have their own `this`, instead inheriting it from the enclosing context."
+                "question": "Q5. What are the differences between Java and JavaScript?",
+                "answer": "Java is a general-purpose, object-oriented programming language designed for building standalone applications, while JavaScript is a lightweight scripting language used mainly for enhancing web pages."
             },
             {
                 "id": 6,
-                "question": "What is event delegation?",
-                "answer": "Event delegation is a technique of handling events by attaching a single event listener to a parent element, which will listen for events on its child elements."
+                "question": "Q6. Mention advantages and features of JavaScript.",
+                "answer": "Advantages of JavaScript include ease of learning, wide browser support, and the ability to create interactive web experiences. Features include dynamic typing, event-driven programming, and support for object-oriented, imperative, and functional programming paradigms."
             },
             {
                 "id": 7,
-                "question": "What is the `this` keyword in JavaScript?",
-                "answer": "`this` refers to the context in which a function is executed, and its value depends on how the function is called (e.g., object method, event handler, etc.)."
+                "question": "Q7. What are JavaScript data types? List them.",
+                "answer": "JavaScript data types include Primitive types (String, Number, Boolean, Null, Undefined, Symbol, BigInt) and Non-Primitive types (Object, Array, Function)."
             },
             {
                 "id": 8,
-                "question": "What is hoisting in JavaScript?",
-                "answer": "Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compile phase, but only the declarations, not the assignments."
+                "question": "Q8. What is the `Symbol` data type in JavaScript?",
+                "answer": "`Symbol` is a unique and immutable primitive data type used to create unique object keys."
             },
             {
                 "id": 9,
-                "question": "What is the `bind()` method in JavaScript?",
-                "answer": "`bind()` creates a new function that, when called, has its `this` value set to the provided value, and prepends any given arguments to the function’s arguments."
+                "question": "Q9. What is the `NaN` property in JavaScript? What is the use of the `isNaN` function?",
+                "answer": "`NaN` stands for 'Not-a-Number', indicating an invalid numeric result. The `isNaN` function checks whether a value is NaN."
             },
             {
                 "id": 10,
-                "question": "What are template literals in JavaScript?",
-                "answer": "Template literals are a feature in JavaScript that allow embedded expressions within string literals using backticks (``) and `${}` for interpolation of variables or expressions."
+                "question": "Q10. How does the `typeof` operator work in JavaScript?",
+                "answer": "The `typeof` operator returns a string indicating the type of an operand or expression, such as 'string', 'number', or 'object'."
+            },
+            {
+                "id": 11,
+                "question": "Q11. What are template literals in JavaScript?",
+                "answer": "Template literals are string literals enclosed by backticks (`) that allow embedded expressions using ${expression}."
+            },
+            {
+                "id": 12,
+                "question": "Q12. What is negative infinity?",
+                "answer": "Negative infinity is a numeric value that represents a number less than any other number, resulting from dividing a negative number by zero."
+            },
+            {
+                "id": 13,
+                "question": "Q13. What is the difference between `undefined` and `null` in JavaScript?",
+                "answer": "`undefined` indicates a variable that has been declared but not assigned a value, while `null` represents the intentional absence of a value."
+            },
+            {
+                "id": 14,
+                "question": "Q14. What is the `this` keyword in JavaScript, and how does it work?",
+                "answer": "The `this` keyword refers to the context in which a function is executed, such as the global object, a specific object, or undefined in strict mode."
+            },
+            {
+                "id": 15,
+                "question": "Q15. How does the `this` keyword behave in different contexts?",
+                "answer": "The behavior of `this` depends on how a function is called. In the global scope, it refers to the global object. Inside functions, it depends on the call site. In arrow functions, `this` is lexically bound."
+            },
+            {
+                "id": 16,
+                "question": "Q16. What are common array methods in JavaScript?",
+                "answer": "Common array methods include `push()`, `pop()`, `shift()`, `unshift()`, `map()`, `filter()`, `reduce()`, and `forEach()`."
+            },
+            {
+                "id": 17,
+                "question": "Q17. What are common string methods in JavaScript?",
+                "answer": "Common string methods include `charAt()`, `concat()`, `includes()`, `indexOf()`, `slice()`, `split()`, and `toUpperCase()`."
+            },
+            {
+                "id": 18,
+                "question": "Q18. What is 'strict' mode in JavaScript and how can it be enabled?",
+                "answer": "'Strict' mode in JavaScript is a feature that enforces stricter parsing and error handling. It is enabled by adding 'use strict' at the beginning of a script or function."
+            },
+            {
+                "id": 19,
+                "question": "Q19. Explain `call()`, `apply()`, and `bind()` methods. What are their differences?",
+                "answer": "`call()` and `apply()` invoke functions immediately with a specified `this` context, while `bind()` returns a new function. `call()` accepts arguments individually, whereas `apply()` accepts arguments as an array."
+            },
+            {
+                "id": 20,
+                "question": "Q20. What is the difference between `===` and `==`?",
+                "answer": "`===` is the strict equality operator, comparing both value and type. `==` is the loose equality operator, allowing type coercion during comparison."
+            },
+            {
+                "id": 21,
+                "question": "Q21. What are `WeakMap` and `WeakSet` in JavaScript, and how do they differ from `Map` and `Set`?",
+                "answer": "`WeakMap` and `WeakSet` only accept objects as keys and values, and they do not prevent garbage collection. `Map` and `Set` can store values of any type."
+            },
+            {
+                "id": 22,
+                "question": "Q22. What is the difference between local storage and session storage?",
+                "answer": "Local storage persists data across sessions until explicitly cleared, while session storage retains data only for the current browsing session."
+            },
+            {
+                "id": 23,
+                "question": "Q23. What is the difference between `.map()` and `.forEach()` in JavaScript?",
+                "answer": "`.map()` creates a new array by applying a function to each element, while `.forEach()` iterates through the array without returning a new array."
+            },
+            {
+                "id": 24,
+                "question": "Q24. Describe the difference between `<script>`, `<script async>`, and `<script defer>`.",
+                "answer": "`<script>` blocks HTML parsing until the script loads and executes. `async` loads the script in parallel and executes it as soon as it is available. `defer` ensures the script executes after the HTML is fully parsed."
+            },
+            {
+                "id": 25,
+                "question": "Q25. What is the spread/rest operator (`...`) in JavaScript? How does it differ from the arguments object?",
+                "answer": "The spread operator expands elements of an array or object, while the rest operator collects function arguments into an array. The arguments object is array-like but not an actual array."
+            },
+            {
+                "id": 26,
+                "question": "Q26. What is destructuring in JavaScript, and how is it used?",
+                "answer": "Destructuring is a syntax that allows unpacking values from arrays or objects into variables. Example: `const {name} = obj;`."
+            },
+            {
+                "id": 27,
+                "question": "Q27. What is the DOM in JavaScript?",
+                "answer": "The DOM (Document Object Model) is a programming interface for HTML and XML documents, representing the structure as a tree of objects."
+            },
+            {
+                "id": 28,
+                "question": "Q28. How do you access an element by its ID in JavaScript?",
+                "answer": "You can access an element by its ID using `document.getElementById('id')`."
+            },
+            {
+                "id": 29,
+                "question": "Q29. How do you select multiple elements by class name in JavaScript?",
+                "answer": "You can select multiple elements using `document.getElementsByClassName('className')` or `document.querySelectorAll('.className')`."
+            },
+            {
+                "id": 30,
+                "question": "Q30. How do you create a new element and append it to the DOM in JavaScript?",
+                "answer": "Use `document.createElement('tagName')` to create an element and `parent.appendChild(newElement)` to append it to the DOM."
+            },
+            {
+                "id": 31,
+                "question": "Q31. How many ways can an HTML element be accessed in JavaScript?",
+                "answer": "An HTML element can be accessed in JavaScript using methods like `getElementById()`, `getElementsByClassName()`, `getElementsByTagName()`, `querySelector()`, and `querySelectorAll()`."
+            },
+            {
+                "id": 32,
+                "question": "Q32. What is the difference between `innerHTML` and `innerText`?",
+                "answer": "`innerHTML` retrieves or sets the HTML content of an element, while `innerText` retrieves or sets the visible text content, ignoring hidden elements and formatting."
+            },
+            {
+                "id": 33,
+                "question": "Q33. What is the difference between `innerHTML` and `textContent`?",
+                "answer": "`innerHTML` parses and includes HTML tags, while `textContent` retrieves only the text without parsing HTML tags or considering hidden elements."
+            },
+            {
+                "id": 34,
+                "question": "Q34. What's the difference between a window and a document?",
+                "answer": "The `window` object represents the browser window, including all its properties and methods, while the `document` object represents the HTML document loaded in that window."
+            },
+            {
+                "id": 35,
+                "question": "Q35. What is a higher-order function in JavaScript?",
+                "answer": "A higher-order function is a function that can take other functions as arguments or return them as a result."
+            },
+            {
+                "id": 36,
+                "question": "Q36. Provide an example of a higher-order function in action.",
+                "answer": "An example is `Array.prototype.map()`, which takes a callback function as an argument to transform each element of an array."
+            },
+            {
+                "id": 37,
+                "question": "Q37. What is an Immediately Invoked Function Expression (IIFE)?",
+                "answer": "An IIFE is a function that is defined and immediately executed, often used to create a new scope and avoid polluting the global scope."
+            },
+            {
+                "id": 38,
+                "question": "Q38. How do you create an IIFE?",
+                "answer": "You can create an IIFE using syntax like `(function() { /* code */ })();` or `(() => { /* code */ })();`."
+            },
+            {
+                "id": 39,
+                "question": "Q39. What are self-invoking functions?",
+                "answer": "Self-invoking functions are another name for Immediately Invoked Function Expressions (IIFE), which execute automatically after their definition."
+            },
+            {
+                "id": 40,
+                "question": "Q40. What is the difference between function declarations and function expressions?",
+                "answer": "Function declarations are hoisted and can be called before they are defined, while function expressions are not hoisted and are only available after their definition."
+            },
+            {
+                "id": 41,
+                "question": "Q41. What is a pure function in JavaScript?",
+                "answer": "A pure function always produces the same output for the same input and does not cause side effects or rely on external state."
+            },
+            {
+                "id": 42,
+                "question": "Q42. How do you prevent a function from being called too frequently in JavaScript?",
+                "answer": "You can use techniques like debouncing or throttling to control the frequency of function execution."
+            },
+            {
+                "id": 43,
+                "question": "Q43. What is `setImmediate()` in JavaScript?",
+                "answer": "`setImmediate()` is a Node.js method that executes a callback function after the current event loop phase completes."
+            },
+            {
+                "id": 44,
+                "question": "Q44. What are arrow functions, and how do they differ from regular functions?",
+                "answer": "Arrow functions are a concise syntax for writing functions and do not have their own `this`, `arguments`, or `super` bindings."
+            },
+            {
+                "id": 45,
+                "question": "Q45. Why are arrow functions widely used?",
+                "answer": "Arrow functions simplify syntax, are more readable, and do not bind their own `this`, making them useful for callbacks and maintaining context."
+            },
+            {
+                "id": 46,
+                "question": "Q46. What is the difference between regular functions and arrow functions?",
+                "answer": "Regular functions have their own `this` and can be used as constructors, while arrow functions inherit `this` from their enclosing scope and cannot be constructors."
+            },
+            {
+                "id": 47,
+                "question": "Q47. How does `this` behave in arrow functions?",
+                "answer": "In arrow functions, `this` is lexically scoped and always refers to the context in which the function was defined."
+            },
+            {
+                "id": 48,
+                "question": "Q48. What are events in JavaScript?",
+                "answer": "Events are actions or occurrences that happen in the browser, such as clicks, key presses, or loading a page, which JavaScript can respond to."
+            },
+            {
+                "id": 49,
+                "question": "Q49. What is event bubbling and event capturing?",
+                "answer": "Event bubbling propagates events from the target element up through the DOM tree, while event capturing propagates events from the root down to the target element."
+            },
+            {
+                "id": 50,
+                "question": "Q50. Explain event delegation in JavaScript.",
+                "answer": "Event delegation is a technique where a single event listener is added to a parent element to handle events on its child elements."
+            },
+            {
+                "id": 51,
+                "question": "Q51. What is an event handler, and how do you add and remove one?",
+                "answer": "An event handler is a function that handles an event. Use `addEventListener()` to add and `removeEventListener()` to remove an event handler."
+            },
+            {
+                "id": 52,
+                "question": "Q52. How do you remove an event listener in JavaScript?",
+                "answer": "You remove an event listener using `element.removeEventListener(eventType, handlerFunction)`."
+            },
+            {
+                "id": 53,
+                "question": "Q53. How can you prevent an event from propagating?",
+                "answer": "You can prevent event propagation by calling `event.stopPropagation()`."
+            },
+            {
+                "id": 54,
+                "question": "Q54. How do you add an event listener to an element?",
+                "answer": "Use `element.addEventListener(eventType, callbackFunction)` to add an event listener."
+            },
+            {
+                "id": 55,
+                "question": "Q55. What is the purpose of `preventDefault()` in JavaScript events?",
+                "answer": "`preventDefault()` is used to prevent the default behavior associated with an event, such as preventing form submission or link navigation."
+            },
+            {
+                "id": 56,
+                "question": "Q56. What are common JavaScript event types? Name a few examples.",
+                "answer": "Common event types include `click`, `keydown`, `keyup`, `mousemove`, `submit`, `change`, and `load`."
+            },
+            {
+                "id": 57,
+                "question": "Q57. Explain scope and scope chain in JavaScript.",
+                "answer": "Scope defines the visibility and accessibility of variables and functions in JavaScript. The scope chain is the hierarchy of scopes that determines where variables can be accessed, starting from the local scope and moving to outer scopes until the global scope."
+            },
+            {
+                "id": 58,
+                "question": "Q58. What is lexical scope?",
+                "answer": "Lexical scope refers to the scope defined by the placement of variables and functions in the source code. A function's lexical scope is determined by its position in the code and allows access to variables in its parent scopes."
+            },
+            {
+                "id": 59,
+                "question": "Q59. What is the scope of a variable in JavaScript?",
+                "answer": "The scope of a variable determines where it can be accessed. Variables declared with `var` have function or global scope, while `let` and `const` have block scope."
+            },
+            {
+                "id": 60,
+                "question": "Q60. How do you handle errors in JavaScript using `try...catch`?",
+                "answer": "In JavaScript, the `try...catch` block is used to handle errors. Code that may throw an error is placed in the `try` block, and the `catch` block captures and handles the error. Example:\n\n```javascript\ntry {\n  // Code that may throw an error\n} catch (error) {\n  // Handle the error\n}\n```"
+            },
+            {
+                "id": 61,
+                "question": "Q61. What is the `finally` block in JavaScript?",
+                "answer": "The `finally` block in JavaScript is used to execute code after the `try` and `catch` blocks, regardless of whether an error occurred. It is often used for cleanup operations."
+            },
+            {
+                "id": 62,
+                "question": "Q62. What is the difference between `throw` and `return`?",
+                "answer": "`throw` is used to raise an error and stop the execution of the current function, while `return` is used to exit a function and optionally return a value to the caller."
+            },
+            {
+                "id": 63,
+                "question": "Q63. How do you create custom errors in JavaScript?",
+                "answer": "Custom errors can be created by extending the `Error` class. Example:\n\n```javascript\nclass CustomError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'CustomError';\n  }\n}\nthrow new CustomError('This is a custom error');\n```"
+            },
+            {
+                "id": 64,
+                "question": "Q64. What is the purpose of `console.error()` in JavaScript?",
+                "answer": "`console.error()` is used to output error messages to the browser console. It helps in debugging by logging errors separately from general log messages."
+            },
+            {
+                "id": 65,
+                "question": "Q65. How do you debug JavaScript code in the browser?",
+                "answer": "You can debug JavaScript code using browser developer tools by:\n1. Adding `debugger;` statements in the code.\n2. Setting breakpoints in the Sources or Debugger tab.\n3. Using `console.log()` to log values.\n4. Inspecting variables and the call stack during runtime."
+            },
+            {
+                "id": 66,
+                "question": "Q66. Can you explain the concept of the execution context in JavaScript?",
+                "answer": "An execution context is an environment where JavaScript code is evaluated and executed. It consists of the variable object, the scope chain, and the value of `this`. Types include global execution context, function execution context, and eval context."
+            },
+            {
+                "id": 67,
+                "question": "Q67. What is the event loop in JavaScript?",
+                "answer": "The event loop is a mechanism in JavaScript that handles the execution of multiple pieces of code by coordinating between the call stack and the callback queue. It ensures asynchronous operations are executed in the correct order."
+            },
+            {
+                "id": 68,
+                "question": "Q68. What is the call stack?",
+                "answer": "The call stack is a data structure that keeps track of the execution of functions. It follows a Last In, First Out (LIFO) order, pushing new functions when called and popping them off when they return."
+            },
+            {
+                "id": 69,
+                "question": "Q69. What is the difference between synchronous and asynchronous execution?",
+                "answer": "Synchronous execution blocks further code until the current task completes, while asynchronous execution allows other tasks to run without waiting, using callbacks, promises, or async/await."
+            },
+            {
+                "id": 70,
+                "question": "Q70. What is a JavaScript module?",
+                "answer": "A module is a reusable piece of code that is encapsulated and can be imported or exported to other parts of a program. Modules help in organizing and managing code effectively."
+            },
+            {
+                "id": 71,
+                "question": "Q71. What are ES6 modules? How do you import/export them?",
+                "answer": "ES6 modules are a standard for JavaScript modular programming. You use `export` to make code available and `import` to use it in another file. Example:\n\nExport: `export const myFunction = () => {};`\nImport: `import { myFunction } from './module.js';`"
+            },
+            {
+                "id": 72,
+                "question": "Q72. What is a generator function in JavaScript?",
+                "answer": "A generator function is a special function that can pause its execution and resume later. It is defined using the `function*` syntax and uses the `yield` keyword to return values."
+            },
+            {
+                "id": 73,
+                "question": "Q73. What is the `yield` keyword?",
+                "answer": "`yield` is used inside a generator function to pause execution and return a value. Execution can be resumed with the next call to the generator."
+            },
+            {
+                "id": 74,
+                "question": "Q74. What are `Map` and `Set`?",
+                "answer": "`Map` is a collection of key-value pairs, and `Set` is a collection of unique values. Both are iterable and provide methods for efficient data manipulation."
+            },
+            {
+                "id": 75,
+                "question": "Q75. What is a `Proxy` object?",
+                "answer": "A `Proxy` object wraps another object and allows you to intercept and redefine fundamental operations like property access, assignment, and function invocation."
+            },
+            {
+                "id": 76,
+                "question": "Q76. What is the `Reflect` API?",
+                "answer": "The `Reflect` API is a built-in object that provides methods for interceptable JavaScript operations, mirroring those available on `Proxy`. It simplifies object operations like property access or assignment."
+            },
+            {
+                "id": 77,
+                "question": "Q77. What is memoization?",
+                "answer": "Memoization is an optimization technique where the results of expensive function calls are cached for future use, improving performance by avoiding redundant calculations."
+            },
+            {
+                "id": 78,
+                "question": "Q78. What is a debounce function?",
+                "answer": "A debounce function limits the rate at which a function is executed by delaying its execution until after a specified period of inactivity."
+            },
+            {
+                "id": 79,
+                "question": "Q79. Explain debouncing and throttling.",
+                "answer": "Debouncing delays the execution of a function until a period of inactivity, while throttling ensures a function is called at most once in a specified time interval, regardless of how often the event occurs."
+            },
+            {
+                "id": 80,
+                "question": "Q80. How does currying work?",
+                "answer": "Currying is a technique where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. Example:\n\n```javascript\nconst add = x => y => x + y;\nadd(2)(3); // Returns 5\n```"
+            },
+            {
+                "id": 81,
+                "question": "Q81. Explain the temporal dead zone.",
+                "answer": "The temporal dead zone (TDZ) is the period between entering a scope and declaring a variable with `let` or `const`. Accessing the variable before its declaration results in a `ReferenceError`."
+            },
+            {
+                "id": 82,
+                "question": "Q82. What is the prototype chain in JavaScript?",
+                "answer": "The prototype chain is a mechanism in JavaScript through which objects inherit properties and methods from other objects. If a property or method is not found on an object, JavaScript looks up the chain to its prototype and continues until it reaches `null`."
+            },
+            {
+                "id": 83,
+                "question": "Q83. Explain prototypal inheritance and how it differs from classical inheritance.",
+                "answer": "Prototypal inheritance is a JavaScript feature where objects can inherit directly from other objects via prototypes. In contrast, classical inheritance (used in languages like Java) involves classes and hierarchical structures. Prototypal inheritance is more flexible and supports composition over inheritance."
+            },
+            {
+                "id": 84,
+                "question": "Q84. How do objects inherit from other objects in JavaScript?",
+                "answer": "Objects inherit from other objects in JavaScript through their prototype. This can be set explicitly using `Object.create(parentObject)` or by using `class` and `extends` for modern syntax."
+            },
+            {
+                "id": 85,
+                "question": "Q85. What is the purpose of the `Object.create()` method?",
+                "answer": "`Object.create()` creates a new object with the specified prototype object. It is commonly used to implement prototypal inheritance by setting the prototype of the new object to the desired parent object."
+            },
+            {
+                "id": 86,
+                "question": "Q86. What is the difference between a class and a constructor function?",
+                "answer": "A class is a syntactic sugar introduced in ES6 for creating objects and handling inheritance, while a constructor function is an older method to achieve the same. Classes provide a cleaner and more structured syntax, but both result in similar behavior under the hood."
+            },
+            {
+                "id": 87,
+                "question": "Q87. How can you add methods to an existing prototype?",
+                "answer": "You can add methods to an existing prototype by directly modifying the prototype property of a constructor function. For example:\n\n```javascript\nfunction Person(name) {\n  this.name = name;\n}\nPerson.prototype.greet = function() {\n  return `Hello, ${this.name}`;\n};\n```"
+            },
+            {
+                "id": 88,
+                "question": "Q88. How do you implement inheritance in JavaScript?",
+                "answer": "Inheritance in JavaScript can be implemented using:\n1. **Prototypes**: Use `Object.create()` to create a new object with a specified prototype.\n2. **Classes**: Use `class` and `extends` for modern syntax. Example:\n\n```javascript\nclass Parent {\n  constructor(name) {\n    this.name = name;\n  }\n}\nclass Child extends Parent {\n  constructor(name, age) {\n    super(name);\n    this.age = age;\n  }\n}\n```"
+            },
+            {
+                "id": 89,
+                "question": "Q89. How does JavaScript handle memory management?",
+                "answer": "JavaScript uses automatic memory management with garbage collection. It allocates memory when objects or variables are created and frees it when they are no longer needed, based on reachability."
+            },
+            {
+                "id": 90,
+                "question": "Q90. What is garbage collection, and how does it work?",
+                "answer": "Garbage collection is the process by which JavaScript automatically reclaims memory by identifying and removing objects that are no longer accessible or needed. Modern garbage collectors use algorithms like mark-and-sweep to manage memory efficiently."
+            },
+            {
+                "id": 91,
+                "question": "Q91. What are memory leaks? How can they occur, and how can you avoid them?",
+                "answer": "Memory leaks occur when memory that is no longer needed is not released. Common causes include global variables, event listeners that are not removed, and closures. To avoid them, use tools like Chrome DevTools for memory profiling and clean up references and event listeners."
+            },
+            {
+                "id": 92,
+                "question": "Q92. What are strong references and weak references?",
+                "answer": "A strong reference prevents an object from being garbage collected, while a weak reference does not. Weak references (e.g., `WeakMap` or `WeakSet`) allow objects to be garbage collected if there are no strong references to them."
+            },
+            {
+                "id": 93,
+                "question": "Q93. What is the result of `3 + 2 + \"7\"`?",
+                "answer": "The result is the string `\"57\"`. JavaScript evaluates the expression from left to right, first adding `3 + 2` (5) and then concatenating the string `\"7\"`, resulting in `\"57\"`."
+            },
+            {
+                "id": 94,
+                "question": "Q94. How do you reduce the number of reflows and repaints in the browser’s rendering process?",
+                "answer": "To reduce reflows and repaints:\n1. Minimize DOM changes.\n2. Batch DOM updates.\n3. Use `class` toggling instead of inline styles.\n4. Avoid layouts that require frequent recalculations, like dynamic resizing."
+            },
+            {
+                "id": 95,
+                "question": "Q95. Explain the difference between `Object.freeze()` and `Object.seal()`.",
+                "answer": "`Object.freeze()` makes an object immutable, preventing additions, deletions, or modifications of properties. `Object.seal()` prevents adding or deleting properties but allows modification of existing properties."
+            },
+            {
+                "id": 96,
+                "question": "Q96. What are the key differences between `async/await` and promises?",
+                "answer": "`async/await` provides a cleaner, more synchronous-looking way to work with asynchronous code, while promises use chaining with `.then()` and `.catch()`. `async/await` is built on promises but offers better readability."
+            },
+            {
+                "id": 97,
+                "question": "Q97. How do you optimize the performance of JavaScript code in a web application?",
+                "answer": "To optimize performance:\n1. Minimize DOM manipulations.\n2. Use efficient algorithms.\n3. Cache values.\n4. Use lazy loading and code splitting.\n5. Optimize loops and event listeners.\n6. Debounce or throttle expensive operations."
+            },
+            {
+                "id": 98,
+                "question": "Q98. Explain the use of `documentFragment`.",
+                "answer": "`documentFragment` is a lightweight, in-memory representation of a DOM structure. It is used to build and insert multiple nodes efficiently without triggering reflows and repaints until appended to the main DOM."
+            },
+            {
+                "id": 99,
+                "question": "Q99. What is the difference between shallow copy and deep copy in JavaScript?",
+                "answer": "A shallow copy duplicates the first level of an object or array, while references to nested objects remain shared. A deep copy creates independent copies of all levels. Shallow copies can be created with `Object.assign()` or spread syntax, and deep copies often use libraries like `lodash` or `structuredClone()`."
+            },
+            {
+                "id": 100,
+                "question": "Q1. What are closures, and how do they help in managing data privacy and maintaining state in JavaScript?",
+                "answer": "Closures are functions that have access to their own scope, the scope of the outer function, and the global scope. They allow you to maintain state and protect variables from being accessed directly, enabling data privacy."
+            },
+            {
+                "id": 101,
+                "question": "Q2. Explain the concept of the 'module pattern' and how closures play a role in it.",
+                "answer": "The module pattern uses closures to create private and public variables or methods. It allows encapsulation of functionality while exposing only what is necessary through a returned object."
+            },
+            {
+                "id": 102,
+                "question": "Q3. What is a closure in JavaScript?",
+                "answer": "A closure is a function that 'remembers' the environment in which it was created, even after that environment has exited. It allows the function to access variables from its lexical scope."
+            },
+            {
+                "id": 103,
+                "question": "Q4. Explain the concept of closures and provide an example.",
+                "answer": "Closures are functions that retain access to their outer scope even after the outer function has executed. Example:\n\n```javascript\nfunction outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    return count;\n  };\n}\nconst increment = outer();\nconsole.log(increment()); // 1\nconsole.log(increment()); // 2\n```"
+            },
+            {
+                "id": 104,
+                "question": "Q5. How do closures relate to scope and the lexically enclosed variables?",
+                "answer": "Closures capture variables from their outer lexical scope, allowing a function to access and modify those variables even after the outer function has returned."
+            },
+            {
+                "id": 105,
+                "question": "Q6. Can you give an example of a closure that demonstrates data encapsulation?",
+                "answer": "Example:\n\n```javascript\nfunction counter() {\n  let count = 0;\n  return {\n    increment: function() { count++; return count; },\n    decrement: function() { count--; return count; }\n  };\n}\nconst myCounter = counter();\nconsole.log(myCounter.increment()); // 1\nconsole.log(myCounter.decrement()); // 0\n```"
+            },
+            {
+                "id": 106,
+                "question": "Q7. Why are closures useful in JavaScript?",
+                "answer": "Closures are useful for creating private variables, maintaining state across function calls, and implementing techniques like currying and partial application."
+            },
+            {
+                "id": 107,
+                "question": "Q8. Explain closures in JavaScript.",
+                "answer": "Closures allow a function to access variables from its outer lexical scope, even when executed outside of that scope. They are created every time a function is defined within another function."
+            },
+            {
+                "id": 108,
+                "question": "Q9. When should you use closures in JavaScript?",
+                "answer": "Use closures when you need to create private variables, maintain state, or avoid polluting the global scope with temporary variables."
+            },
+            {
+                "id": 109,
+                "question": "Q10. What are potential performance pitfalls when using closures, and how can you mitigate them?",
+                "answer": "Closures can cause memory leaks if they inadvertently hold references to variables that are no longer needed. To mitigate this, ensure closures do not unnecessarily capture variables and release references when they are no longer needed."
+            },
+            {
+                "id": 110,
+                "question": "Q1. What is hoisting, and how does it work internally in JavaScript?",
+                "answer": "Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase. This means you can use variables and functions before they are declared."
+            },
+            {
+                "id": 111,
+                "question": "Q2. Explain how variable and function declarations are hoisted.",
+                "answer": "In hoisting, function declarations are fully hoisted, meaning both the function name and its definition are moved to the top. For variables declared with `var`, only the declaration is hoisted, not the initialization. With `let` and `const`, neither the declaration nor the initialization is hoisted."
+            },
+            {
+                "id": 112,
+                "question": "Q3. What is the difference between `var`, `let`, and `const` in terms of hoisting?",
+                "answer": "`var` declarations are hoisted and initialized with `undefined`. `let` and `const` declarations are hoisted but are not initialized until their declaration is evaluated during execution. Accessing them before the declaration results in a ReferenceError due to the Temporal Dead Zone (TDZ)."
+            },
+            {
+                "id": 113,
+                "question": "Q4. Explain how hoisting works with each keyword (`var`, `let`, and `const`).",
+                "answer": "`var` declarations are hoisted to the top and initialized with `undefined`. `let` and `const` are hoisted to the top of their block scope but are not initialized until the code execution reaches the declaration, resulting in a TDZ for these variables."
+            },
+            {
+                "id": 114,
+                "question": "Q5. Discuss how function declarations and function expressions behave during hoisting.",
+                "answer": "Function declarations are hoisted with their full definition, allowing them to be called before they are defined. Function expressions (including those assigned to variables) are not hoisted in the same way. The variable is hoisted, but the function expression is only assigned during execution."
+            },
+            {
+                "id": 115,
+                "question": "Q6. Can you demonstrate an example where hoisting causes unexpected behavior?",
+                "answer": "Example:\n\n```javascript\nconsole.log(x); // undefined\nvar x = 5;\n```\nHere, the declaration of `x` is hoisted, but its assignment happens later, so `undefined` is logged."
+            },
+            {
+                "id": 116,
+                "question": "Q7. Discuss potential issues with hoisting and how to avoid them.",
+                "answer": "Hoisting can lead to unexpected behavior, especially with `var` variables that are initialized with `undefined`. To avoid this, use `let` and `const` to take advantage of block scoping, and always declare variables at the top of their scope."
+            },
+            {
+                "id": 117,
+                "question": "Q8. How do block-level scoping and hoisting work for `let` and `const` compared to `var`?",
+                "answer": "`let` and `const` are block-scoped, meaning they only exist within the block they are defined in. Unlike `var`, which is function-scoped, `let` and `const` also avoid hoisting-related issues by not allowing access before their initialization due to the TDZ."
+            },
+            {
+                "id": 118,
+                "question": "Q9. How does temporal dead zone (TDZ) relate to hoisting?",
+                "answer": "The Temporal Dead Zone (TDZ) is the period between the entering of a scope and the actual initialization of a `let` or `const` variable. During this period, attempting to access the variable results in a ReferenceError."
+            },
+            {
+                "id": 119,
+                "question": "Q10. What are best practices to avoid issues caused by hoisting?",
+                "answer": "To avoid hoisting issues, always declare variables at the top of their scope, use `let` or `const` instead of `var` to prevent accidental hoisting, and avoid using variables before they are initialized."
+            },
+            {
+                "id": 120,
+                "question": "Q1. What is a callback function in JavaScript?",
+                "answer": "A callback function is a function passed into another function as an argument to be executed later, often after some asynchronous operation or event has completed."
+            },
+            {
+                "id": 121,
+                "question": "Q2. Define callbacks and give examples where they are commonly used.",
+                "answer": "Callbacks are functions that are passed as arguments to other functions, allowing the callback to be invoked at a later time. They are commonly used in asynchronous programming, such as with `setTimeout()`, `setInterval()`, or event listeners."
+            },
+            {
+                "id": 122,
+                "question": "Q3. What is the potential issue with using callbacks for asynchronous operations in JavaScript?",
+                "answer": "The main issue with callbacks for asynchronous operations is 'callback hell' or 'pyramid of doom,' where multiple nested callbacks make the code hard to read, understand, and maintain."
+            },
+            {
+                "id": 123,
+                "question": "Q4. What is 'callback hell' in JavaScript, and how can you avoid it?",
+                "answer": "'Callback hell' refers to the situation where callbacks are nested within each other to handle asynchronous operations, creating complex, deeply nested code. You can avoid it by using Promises or `async/await`, which lead to cleaner, more readable code."
+            },
+            {
+                "id": 124,
+                "question": "Q5. Discuss nested callbacks and methods for improving readability, such as Promises or `async/await`.",
+                "answer": "Nested callbacks can be difficult to manage and cause readability issues. Promises help by chaining asynchronous operations, and `async/await` further simplifies the process, allowing asynchronous code to appear more like synchronous code, improving readability and reducing nesting."
+            },
+            {
+                "id": 125,
+                "question": "Q6. How do you convert a callback-based function to return a Promise?",
+                "answer": "To convert a callback-based function to return a Promise, wrap the callback logic inside a new Promise. The function will resolve or reject based on the callback's success or failure.\n\nExample:\n```javascript\nfunction myAsyncFunction() {\n  return new Promise((resolve, reject) => {\n    someAsyncTask((error, result) => {\n      if (error) reject(error);\n      else resolve(result);\n    });\n  });\n}\n```"
+            },
+            {
+                "id": 126,
+                "question": "Q7. Can you provide an example of callback hell and how you would refactor it?",
+                "answer": "Example of callback hell:\n```javascript\nfirstAsyncTask(function(err, result1) {\n  secondAsyncTask(result1, function(err, result2) {\n    thirdAsyncTask(result2, function(err, result3) {\n      // and so on...\n    });\n  });\n});\n```\nRefactor using Promises:\n```javascript\nfirstAsyncTask()\n  .then(result1 => secondAsyncTask(result1))\n  .then(result2 => thirdAsyncTask(result2))\n  .catch(err => console.error(err));\n```"
+            },
+            {
+                "id": 127,
+                "question": "Q8. What are alternatives to callbacks for handling asynchronous operations?",
+                "answer": "Alternatives to callbacks include Promises and `async/await`. Promises allow chaining of asynchronous operations, and `async/await` provides a more synchronous-looking syntax for handling asynchronous code, both avoiding callback hell and improving readability."
             }
         ]
     },
