@@ -2093,6 +2093,851 @@
                 "id": 250,
                 "question": "Q250. How do you test components using hooks?",
                 "answer": "You can test components with hooks using React Testing Library. You may need to mock hooks, such as `useState` or `useEffect`, and simulate their behavior during tests to ensure the component renders correctly."
+            },
+            {
+                "id": 251,
+                "question": "Q251. What is the component lifecycle in React?",
+                "answer": "The component lifecycle in React describes the sequence of methods that React components go through from creation to destruction. These phases include mounting, updating, and unmounting."
+            },
+            {
+                "id": 252,
+                "question": "Q252. What are the three phases of the React component lifecycle?",
+                "answer": "The three phases of the React component lifecycle are: Mounting, Updating, and Unmounting."
+            },
+            {
+                "id": 253,
+                "question": "Q253. What is the purpose of lifecycle methods in class components?",
+                "answer": "Lifecycle methods in class components allow developers to run custom logic at specific points during a component’s lifecycle, such as initialization, updates, and cleanup."
+            },
+            {
+                "id": 254,
+                "question": "Q254. How is the React lifecycle different in class components vs. functional components?",
+                "answer": "In class components, lifecycle methods like `componentDidMount` and `shouldComponentUpdate` control different phases. In functional components, hooks like `useEffect` replicate similar behaviors but with a simpler, more declarative syntax."
+            },
+            {
+                "id": 255,
+                "question": "Q255. What are the lifecycle methods in the mounting phase?",
+                "answer": "In the mounting phase, the lifecycle methods include: `constructor()`, `static getDerivedStateFromProps()`, `render()`, and `componentDidMount()`."
+            },
+            {
+                "id": 256,
+                "question": "Q256. What is the role of constructor() in a React class component?",
+                "answer": "The `constructor()` method is used for initializing state and binding event handlers in class components."
+            },
+            {
+                "id": 257,
+                "question": "Q257. What is getDerivedStateFromProps() used for?",
+                "answer": "The `getDerivedStateFromProps()` method is a static method used to derive state from props. It allows the component to update its state based on changes in props."
+            },
+            {
+                "id": 258,
+                "question": "Q258. What happens during the render() method?",
+                "answer": "The `render()` method returns JSX, and React builds the virtual DOM from it. This is the method that actually outputs the component’s UI."
+            },
+            {
+                "id": 259,
+                "question": "Q259. What is the purpose of componentDidMount()?",
+                "answer": "The `componentDidMount()` method is used for performing side effects, such as data fetching, setting up subscriptions, or DOM manipulation, after the component has mounted."
+            },
+            {
+                "id": 260,
+                "question": "Q260. What triggers the updating phase in React?",
+                "answer": "The updating phase is triggered by changes in props, state, or when `forceUpdate()` is called."
+            },
+            {
+                "id": 261,
+                "question": "Q261. What are the lifecycle methods in the updating phase?",
+                "answer": "In the updating phase, the lifecycle methods include: `static getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()`, and `componentDidUpdate()`."
+            },
+            {
+                "id": 262,
+                "question": "Q262. What is shouldComponentUpdate(), and how is it used?",
+                "answer": "`shouldComponentUpdate()` is used to optimize re-renders by determining whether a component should update in response to prop or state changes. It returns a boolean value indicating if a re-render is necessary."
+            },
+            {
+                "id": 263,
+                "question": "Q263. What is the purpose of getSnapshotBeforeUpdate()?",
+                "answer": "`getSnapshotBeforeUpdate()` captures information (like scroll position) before the DOM is updated. It allows you to make calculations or record information that needs to be persisted before the render."
+            },
+            {
+                "id": 264,
+                "question": "Q264. What happens in componentDidUpdate()?",
+                "answer": "`componentDidUpdate()` is called after a component re-renders. It’s typically used for side effects such as interacting with APIs or updating the DOM based on prop or state changes."
+            },
+            {
+                "id": 265,
+                "question": "Q265. What is the sequence of methods during the updating phase?",
+                "answer": "The sequence during the updating phase is: `getDerivedStateFromProps()`, `shouldComponentUpdate()`, `render()`, `getSnapshotBeforeUpdate()`, and `componentDidUpdate()`."
+            },
+            {
+                "id": 266,
+                "question": "Q266. What are some common use cases for componentDidUpdate()?",
+                "answer": "Common use cases for `componentDidUpdate()` include fetching new data based on prop changes, updating the DOM, or synchronizing with external systems after the component has re-rendered."
+            },
+            {
+                "id": 267,
+                "question": "Q267. What is the lifecycle method in the unmounting phase?",
+                "answer": "In the unmounting phase, the lifecycle method is `componentWillUnmount()`."
+            },
+            {
+                "id": 268,
+                "question": "Q268. What is the purpose of componentWillUnmount()?",
+                "answer": "`componentWillUnmount()` is used for cleanup tasks, such as removing event listeners, canceling API calls, or unsubscribing from services, before the component is removed from the DOM."
+            },
+            {
+                "id": 269,
+                "question": "Q269. What happens if you forget to clean up resources in componentWillUnmount()?",
+                "answer": "If you forget to clean up resources in `componentWillUnmount()`, it can result in memory leaks or unexpected behaviors, such as event listeners remaining active or API calls continuing after the component is unmounted."
+            },
+            {
+                "id": 270,
+                "question": "Q270. What are error boundary lifecycle methods?",
+                "answer": "Error boundary lifecycle methods include `static getDerivedStateFromError()` and `componentDidCatch()`. These methods are used to catch and handle errors in React components."
+            },
+            {
+                "id": 271,
+                "question": "Q271. What is getDerivedStateFromError() used for?",
+                "answer": "`getDerivedStateFromError()` is used to update the state to display a fallback UI when an error occurs in a child component."
+            },
+            {
+                "id": 272,
+                "question": "Q272. What is the purpose of componentDidCatch()?",
+                "answer": "`componentDidCatch()` is used for logging errors or performing side effects when an error is caught in a child component."
+            },
+            {
+                "id": 273,
+                "question": "Q273. What is the sequence of lifecycle methods during the initial render?",
+                "answer": "The sequence of lifecycle methods during the initial render is: `constructor()`, `getDerivedStateFromProps()`, `render()`, and `componentDidMount()`."
+            },
+            {
+                "id": 274,
+                "question": "Q274. What happens if render() throws an error?",
+                "answer": "If `render()` throws an error, the error boundary methods, `getDerivedStateFromError()` and `componentDidCatch()`, will handle the error and allow you to show a fallback UI or log the error."
+            },
+            {
+                "id": 275,
+                "question": "Q275. Can you update state in componentDidMount()? Why or why not?",
+                "answer": "Yes, you can update state in `componentDidMount()`, but it will trigger a re-render. You should use this cautiously to avoid unnecessary re-renders."
+            },
+            {
+                "id": 276,
+                "question": "Q276. What are some common use cases for shouldComponentUpdate()?",
+                "answer": "Common use cases for `shouldComponentUpdate()` include skipping re-renders when props or state have not changed, improving performance by avoiding unnecessary updates."
+            },
+            {
+                "id": 277,
+                "question": "Q277. How do you handle async operations in lifecycle methods?",
+                "answer": "Async operations can be handled in `componentDidMount()` or `componentDidUpdate()`. Proper cleanup should be done in `componentWillUnmount()` to avoid memory leaks or errors."
+            },
+            {
+                "id": 278,
+                "question": "Q278. What happens if you call setState in componentDidUpdate() without a condition?",
+                "answer": "Calling `setState()` in `componentDidUpdate()` without a condition will trigger an infinite render loop, as the component will re-render after the state is updated, which causes the `setState()` to be called again."
+            },
+            {
+                "id": 279,
+                "question": "Q279. How would you fetch data in a class component?",
+                "answer": "To fetch data in a class component, you can use `componentDidMount()` to perform the fetch operation and then update the state with the fetched data."
+            },
+            {
+                "id": 280,
+                "question": "Q280. Why is componentWillReceiveProps() deprecated? What should you use instead?",
+                "answer": "`componentWillReceiveProps()` is deprecated because it was prone to bugs and inefficiencies. It should be replaced with `getDerivedStateFromProps()`, which is a safer and more reliable way to update state based on props changes."
+            },
+            {
+                "id": 281,
+                "question": "Q281. How do you optimize rendering in class components?",
+                "answer": "You can optimize rendering in class components using techniques like `shouldComponentUpdate()` to prevent unnecessary re-renders or by using `React.PureComponent`, which implements `shouldComponentUpdate()` with a shallow prop and state comparison."
+            },
+            {
+                "id": 282,
+                "question": "Q282. What are the limitations of lifecycle methods?",
+                "answer": "Lifecycle methods can have limitations such as scattered logic across methods, which can make components harder to manage. React hooks address this by centralizing logic and allowing better reuse in functional components."
+            },
+            {
+                "id": 283,
+                "question": "Q283. How do you manage side effects in class components?",
+                "answer": "Side effects in class components are managed using `componentDidMount()` for setup and data fetching, `componentDidUpdate()` for responding to updates, and `componentWillUnmount()` for cleaning up resources such as subscriptions and event listeners."
+            },
+            {
+                "id": 284,
+                "question": "Q284. What is the difference between componentDidMount() and componentDidUpdate()?",
+                "answer": "`componentDidMount()` is used for first-time setup, such as data fetching or initializing subscriptions. `componentDidUpdate()` is used for responding to changes in props or state, such as fetching new data based on updated props."
+            },
+            {
+                "id": 285,
+                "question": "Q285. How do you ensure proper cleanup in lifecycle methods?",
+                "answer": "Proper cleanup in lifecycle methods is done by using `componentWillUnmount()` to remove event listeners, clear intervals, unsubscribe from services, or cancel API requests to prevent memory leaks and avoid unexpected behaviors."
+            },
+            {
+                "id": 291,
+                "question": "Q291. What is event handling in React?",
+                "answer": "Event handling in React involves attaching event handlers to DOM elements using React's synthetic event system, which normalizes events for consistent behavior across browsers."
+            },
+            {
+                "id": 292,
+                "question": "Q292. What are synthetic events in React?",
+                "answer": "Synthetic events in React are React's cross-browser wrapper for native events. They ensure consistent behavior by normalizing events, handling browser inconsistencies, and pooling events for better performance."
+            },
+            {
+                "id": 293,
+                "question": "Q293. How do you handle events in React?",
+                "answer": "In React, events are handled by attaching event handlers to JSX elements using camelCase attributes, like `onClick`, and passing the handler functions that respond to user interactions."
+            },
+            {
+                "id": 294,
+                "question": "Q294. What are the differences between handling events in React and plain JavaScript?",
+                "answer": "In React, event handlers use camelCase naming (e.g., `onClick`), utilize synthetic events, and the `this` context is automatically bound. In plain JavaScript, event handlers use lowercase naming (e.g., `onclick`), and manual `this` binding is needed."
+            },
+            {
+                "id": 295,
+                "question": "Q295. How do you pass parameters to an event handler in React?",
+                "answer": "In React, parameters can be passed to event handlers using arrow functions or the `.bind()` method. Arrow functions allow you to pass additional arguments directly, while `.bind()` ensures the correct `this` context."
+            },
+            {
+                "id": 296,
+                "question": "Q296. Why do we need to bind this in class components for event handlers?",
+                "answer": "In class components, binding `this` is necessary because JavaScript's default behavior causes `this` to refer to the event target (DOM element) inside callback functions, not the class instance."
+            },
+            {
+                "id": 297,
+                "question": "Q297. How do you bind event handlers in class components?",
+                "answer": "In class components, event handlers can be bound in the constructor using `.bind(this)` or inline using arrow functions in JSX to ensure that the correct context is preserved."
+            },
+            {
+                "id": 298,
+                "question": "Q298. What is the difference between .bind(this) and arrow functions for event handlers?",
+                "answer": "Using `.bind(this)` explicitly binds the handler to the class instance, while arrow functions automatically bind `this` to the context where they are defined. Arrow functions are often preferred for conciseness and performance."
+            },
+            {
+                "id": 299,
+                "question": "Q299. How does event handling differ in functional components?",
+                "answer": "Functional components don't require `this` binding because they don't have instance methods. Event handlers can be passed directly in JSX, and arrow functions can be used inline."
+            },
+            {
+                "id": 300,
+                "question": "Q300. What are some common React events you can handle?",
+                "answer": "Common React events include `onClick`, `onChange`, `onSubmit`, `onMouseEnter`, `onKeyDown`, `onFocus`, among others."
+            },
+            {
+                "id": 301,
+                "question": "Q301. How do you handle form submission in React?",
+                "answer": "Form submission in React is handled by attaching an `onSubmit` event handler that calls `e.preventDefault()` to prevent the default form submission behavior, then managing form data with React state."
+            },
+            {
+                "id": 302,
+                "question": "Q302. How do you handle input changes in a form?",
+                "answer": "Input changes in a form are handled by using controlled components, where the `onChange` event updates the component's state, which in turn updates the value of the input."
+            },
+            {
+                "id": 303,
+                "question": "Q303. What is the difference between onChange and onInput in React?",
+                "answer": "The `onChange` event in React is triggered when the value of an input element changes, while `onInput` is triggered every time the user types or modifies the input's value."
+            },
+            {
+                "id": 304,
+                "question": "Q304. How do you handle keyboard events in React?",
+                "answer": "Keyboard events in React are handled using events like `onKeyDown`, `onKeyPress`, or `onKeyUp` to detect key presses and execute appropriate logic."
+            },
+            {
+                "id": 305,
+                "question": "Q305. How do you handle mouse events in React?",
+                "answer": "Mouse events in React are handled using events like `onMouseEnter`, `onMouseLeave`, and `onClick` to detect mouse actions and trigger related handlers."
+            },
+            {
+                "id": 306,
+                "question": "Q306. How do you prevent the default behavior of an event in React?",
+                "answer": "In React, the default behavior of an event can be prevented by calling `e.preventDefault()` within the event handler. This is commonly used for form submissions or anchor tag clicks."
+            },
+            {
+                "id": 307,
+                "question": "Q307. What is event delegation, and how does React handle it?",
+                "answer": "Event delegation refers to attaching a single event listener to a parent element, which handles events for all its child elements. React achieves this by using a single event listener at the root of the DOM tree, improving performance."
+            },
+            {
+                "id": 308,
+                "question": "Q308. Can you use stopPropagation in React events?",
+                "answer": "Yes, you can use `e.stopPropagation()` in React events to prevent event bubbling, which stops the event from propagating to parent elements in the DOM."
+            },
+            {
+                "id": 309,
+                "question": "Q309. How does React handle event bubbling?",
+                "answer": "React handles event bubbling through its synthetic event system, which simulates the propagation of events from child to parent elements in a controlled manner, improving cross-browser compatibility."
+            },
+            {
+                "id": 310,
+                "question": "Q310. What are custom events in React? How do you implement them?",
+                "answer": "Custom events in React are simulated using state, props, and callback functions to communicate between components. This allows custom event-like behavior, such as passing data or triggering actions."
+            },
+            {
+                "id": 311,
+                "question": "Q311. What is the purpose of the persist method in React events?",
+                "answer": "The `persist()` method in React events prevents the synthetic event from being reused, allowing access to event properties asynchronously without worrying about it being nullified."
+            },
+            {
+                "id": 312,
+                "question": "Q312. How do you conditionally handle an event in React?",
+                "answer": "Conditional handling of events in React can be done by adding logic inside the event handler or dynamically attaching and detaching handlers based on component state or props."
+            },
+            {
+                "id": 313,
+                "question": "Q313. How do you debounce or throttle event handlers in React?",
+                "answer": "Debouncing or throttling in React can be achieved using utility functions like `_.debounce` or `_.throttle` from Lodash to limit how frequently an event handler is executed, improving performance."
+            },
+            {
+                "id": 314,
+                "question": "Q314. How do you handle multiple events on a single element?",
+                "answer": "Multiple events on a single element in React can be handled by attaching multiple handlers or creating a wrapper function that manages different events and consolidates the logic."
+            },
+            {
+                "id": 315,
+                "question": "Q315. How do you implement drag-and-drop functionality in React?",
+                "answer": "Drag-and-drop functionality in React can be implemented using events like `onDragStart`, `onDragOver`, and `onDrop`, along with custom logic to handle data transfer between elements."
+            },
+            {
+                "id": 316,
+                "question": "Q316. How can you trigger an event programmatically in React?",
+                "answer": "Events can be triggered programmatically in React using references (`ref`) to access DOM elements and calling methods like `click()` or manually dispatching events."
+            },
+            {
+                "id": 317,
+                "question": "Q317. How do you handle a global event like window resize in React?",
+                "answer": "To handle a global event like window resize, you can use the `addEventListener` method inside `useEffect` or lifecycle methods, ensuring proper cleanup to avoid memory leaks."
+            },
+            {
+                "id": 318,
+                "question": "Q318. How do you optimize event handlers in React?",
+                "answer": "Event handlers can be optimized in React by using `useCallback` to memoize the handlers, preventing unnecessary re-creations, and avoiding inline handlers when not necessary."
+            },
+            {
+                "id": 319,
+                "question": "Q319. What are the performance implications of using inline event handlers in React?",
+                "answer": "Using inline event handlers in React can lead to the creation of new function instances on each render, potentially causing unnecessary re-renders of child components and affecting performance."
+            },
+            {
+                "id": 320,
+                "question": "Q320. How do you prevent unnecessary re-renders caused by event handlers?",
+                "answer": "Unnecessary re-renders caused by event handlers can be prevented by using `React.memo`, `useCallback`, or binding handlers outside the render method, ensuring that the handlers don't change on every render."
+            },
+            {
+                "id": 321,
+                "question": "Q321. How do you test event handlers in React?",
+                "answer": "Event handlers in React can be tested using libraries like Jest and React Testing Library. These tools allow you to simulate events (e.g., `click`, `change`) and assert the expected behavior of components, ensuring that the event handlers work correctly."
+            },
+            {
+                "id": 322,
+                "question": "Q322. How do you debug React event handlers?",
+                "answer": "To debug React event handlers, you can use `console.log` to log event data or state changes, React DevTools to inspect component states and props, and browser developer tools to set breakpoints and step through the code."
+            },
+            {
+                "id": 323,
+                "question": "Q323. What are props in React?",
+                "answer": "Props are inputs to components that are passed from parent to child. They are immutable and used for passing data or functions to child components."
+            },
+            {
+                "id": 324,
+                "question": "Q324. What is state in React?",
+                "answer": "State is a component's local, dynamic data that determines its behavior and appearance. It is mutable and can be updated within the component."
+            },
+            {
+                "id": 325,
+                "question": "Q325. What is the difference between props and state in React?",
+                "answer": "Props are read-only and passed from parent to child, while state is mutable and managed within the component. Props are used to pass data, whereas state is used to manage dynamic, internal data."
+            },
+            {
+                "id": 326,
+                "question": "Q326. Can a component have both props and state?",
+                "answer": "Yes, a component can have both props and state. Props are used for external data passed from the parent, and state is used for internal data that the component manages."
+            },
+            {
+                "id": 327,
+                "question": "Q327. When should you use props, and when should you use state?",
+                "answer": "Use props for external data passed from a parent component and state for managing internal, dynamic data that may change over time."
+            },
+            {
+                "id": 328,
+                "question": "Q328. How do you pass data to child components using props?",
+                "answer": "Data can be passed to child components by specifying it as attributes in JSX. The child component can access this data via the `props` object."
+            },
+            {
+                "id": 329,
+                "question": "Q329. Can you modify props in a child component? Why or why not?",
+                "answer": "No, props are immutable. They can only be modified in the parent component. If changes are required, the parent must pass updated props to the child."
+            },
+            {
+                "id": 330,
+                "question": "Q330. What are default props in React?",
+                "answer": "Default props provide default values for props that are not passed to a component. These are set using `defaultProps`."
+            },
+            {
+                "id": 331,
+                "question": "Q331. What is the significance of the key prop in React?",
+                "answer": "The `key` prop helps React identify elements in a list, enabling efficient updates during re-renders. It ensures each element is uniquely identified."
+            },
+            {
+                "id": 332,
+                "question": "Q332. How do you validate props in React?",
+                "answer": "Props can be validated using PropTypes, a library that checks if the received prop matches the expected type and structure."
+            },
+            {
+                "id": 333,
+                "question": "Q333. What happens if a prop is not passed to a component?",
+                "answer": "If a prop is not passed, its value is `undefined`. You can handle this by setting default props using `defaultProps`."
+            },
+            {
+                "id": 334,
+                "question": "Q334. How can you pass a function as a prop in React?",
+                "answer": "A function can be passed as a prop by defining the function in the parent and then passing it to the child component like any other prop."
+            },
+            {
+                "id": 335,
+                "question": "Q335. How do you initialize state in a React component?",
+                "answer": "State in class components is initialized with `this.state`. In functional components, it is initialized using the `useState` hook."
+            },
+            {
+                "id": 336,
+                "question": "Q336. How do you update state in React?",
+                "answer": "State is updated in class components using `this.setState` and in functional components using the setter function returned by the `useState` hook."
+            },
+            {
+                "id": 337,
+                "question": "Q337. What is the significance of the setState method? Why is it asynchronous?",
+                "answer": "The `setState` method triggers a re-render of the component. It is asynchronous to optimize performance by batching multiple state updates."
+            },
+            {
+                "id": 338,
+                "question": "Q338. How do you update state based on a previous state?",
+                "answer": "You can use the functional form of `setState` to update state based on the previous state, like `this.setState((prevState) => ({ count: prevState.count + 1 }))`."
+            },
+            {
+                "id": 339,
+                "question": "Q339. What is the difference between state and a regular variable in React?",
+                "answer": "State triggers re-renders in React, whereas regular variables do not. State is reactive, meaning changes to state will cause the component to re-render."
+            },
+            {
+                "id": 340,
+                "question": "Q340. How do you manage complex state in React?",
+                "answer": "Complex state can be managed using objects, arrays, or hooks like `useReducer` for more complex state logic."
+            },
+            {
+                "id": 341,
+                "question": "Q341. What happens if you try to update state directly instead of using setState?",
+                "answer": "React will not detect the state change if you mutate the state directly, which means the component will not re-render as expected."
+            },
+            {
+                "id": 342,
+                "question": "Q342. How do you pass state from a parent to a child component?",
+                "answer": "State can be passed down from a parent to a child component through props, which is known as 'lifting state up'."
+            },
+            {
+                "id": 343,
+                "question": "Q343. What are derived states, and how should you avoid them?",
+                "answer": "Derived state is state that is calculated from props or other state. It should be avoided as it can introduce unnecessary complexity. Instead, rely on props or computed values."
+            },
+            {
+                "id": 344,
+                "question": "Q344. How do you handle state in forms (controlled vs. uncontrolled components)?",
+                "answer": "In controlled components, form data is managed by React state. In uncontrolled components, form data is managed by the DOM itself."
+            },
+            {
+                "id": 345,
+                "question": "Q345. What are some common performance pitfalls when working with state?",
+                "answer": "Common pitfalls include unnecessary re-renders caused by incorrect state updates, excessive state management, or overuse of state in components."
+            },
+            {
+                "id": 346,
+                "question": "Q346. How do you reset state in React?",
+                "answer": "State can be reset by using `setState` or `useState` to set the state back to its initial value."
+            },
+            {
+                "id": 347,
+                "question": "Q347. How do you manage global state in React?",
+                "answer": "Global state can be managed using state management libraries like Redux, the Context API, or Recoil."
+            },
+            {
+                "id": 348,
+                "question": "Q348. What are the best practices for managing state in React?",
+                "answer": "Best practices include keeping state minimal, avoiding redundant state, using hooks like `useReducer` for complex state, and structuring state for clarity."
+            },
+            {
+                "id": 349,
+                "question": "Q349. Can you lift state up in React? Why is it useful?",
+                "answer": "Lifting state up allows sharing state between sibling components. It enables components to communicate and synchronize by passing state through their parent."
+            },
+            {
+                "id": 350,
+                "question": "Q350. How do you trigger a state change from a child component?",
+                "answer": "A state-changing function can be passed from the parent to the child as a prop. The child can call this function to trigger a state change in the parent."
+            },
+            {
+                "id": 351,
+                "question": "Q351. What happens if a parent component’s state changes?",
+                "answer": "When a parent component's state changes, all child components that depend on that state will re-render to reflect the updated data."
+            },
+            {
+                "id": 352,
+                "question": "Q352. How do props and state influence rendering in React?",
+                "answer": "Changes to either props or state trigger re-renders in React. If props or state change, React will re-render the component to reflect the updated data."
+            },
+            {
+                "id": 353,
+                "question": "Q353. Can you store props in state? Is it a good idea?",
+                "answer": "While it is technically possible to store props in state, it is not recommended due to potential data inconsistencies and unnecessary re-renders. Props should remain immutable."
+            },
+            {
+                "id": 354,
+                "question": "Q354. How can you debug props and state in a React component?",
+                "answer": "You can debug props and state in a React component using tools like React DevTools, which allow you to inspect the current props and state of a component in real-time. Additionally, you can use `console.log()` statements within the component to log the values of props and state at various points in the component lifecycle."
+            },
+            {
+                "id": 355,
+                "question": "Q355. How do you prevent unnecessary state updates?",
+                "answer": "To prevent unnecessary state updates, you can use techniques such as `shouldComponentUpdate` (for class components), `React.memo` (for functional components), or optimize the state structure to minimize frequent updates. These techniques ensure that a component only re-renders when absolutely necessary, improving performance."
+            },
+            {
+                "id": 356,
+                "question": "Q356. How do you handle deeply nested state updates?",
+                "answer": "Deeply nested state updates can be handled by ensuring immutability. You can use immutability helpers or libraries like `Immer` to simplify the process of updating deeply nested state without mutating it directly. These libraries enable safer and more predictable state management."
+            },
+            {
+                "id": 357,
+                "question": "Q357. What is the relationship between props, state, and re-rendering?",
+                "answer": "React re-renders components whenever their props or state change. If either the props passed down from the parent or the internal state of a component is updated, React triggers a re-render to reflect the new data. This is how React ensures the UI stays in sync with the underlying data."
+            },
+            {
+                "id": 358,
+                "question": "Q358. What are components in React?",
+                "answer": "Components are reusable building blocks in React applications. They encapsulate UI elements and logic, making it easier to manage complex UIs by breaking them into smaller, self-contained pieces."
+            },
+            {
+                "id": 359,
+                "question": "Q359. What are the types of React components?",
+                "answer": "There are two types of React components: functional components and class components. Functional components are simpler and are now the preferred type, especially with the introduction of hooks. Class components, though less common now, offer more built-in features like lifecycle methods."
+            },
+            {
+                "id": 360,
+                "question": "Q360. What is the difference between a functional component and a class component?",
+                "answer": "The key differences between functional and class components lie in their syntax, lifecycle methods, state management, and hooks. Functional components are simpler and use hooks for state and side effects, while class components require ES6 classes and use `this.state`, `this.setState`, and lifecycle methods."
+            },
+            {
+                "id": 361,
+                "question": "Q361. What is a pure component in React?",
+                "answer": "A pure component is a type of component that optimizes performance by only re-rendering when its props or state have changed. It performs a shallow comparison of props and state to determine if a re-render is necessary, reducing unnecessary renders."
+            },
+            {
+                "id": 362,
+                "question": "Q362. What are higher-order components (HOCs)?",
+                "answer": "Higher-order components (HOCs) are functions that take a component and return a new enhanced component. They are used to add common functionality (e.g., authentication, logging, data fetching) to existing components without modifying their original code."
+            },
+            {
+                "id": 363,
+                "question": "Q363. What are controlled and uncontrolled components?",
+                "answer": "Controlled components manage form inputs via state, meaning their value is bound to a state variable. Uncontrolled components manage form inputs via the DOM, and their value is accessed through references (e.g., using `ref` to get the value)."
+            },
+            {
+                "id": 364,
+                "question": "Q364. What are React fragments, and why are they used in components?",
+                "answer": "React fragments are used to group multiple elements together without adding extra DOM nodes. They allow you to return multiple elements from a component without wrapping them in a single parent element, which can be useful for performance and structure."
+            },
+            {
+                "id": 365,
+                "question": "Q365. What are functional components in React?",
+                "answer": "Functional components are JavaScript functions that accept `props` as arguments and return React elements. They are simpler than class components and have become more popular with the introduction of hooks for state and lifecycle features."
+            },
+            {
+                "id": 366,
+                "question": "Q366. What are class components in React?",
+                "answer": "Class components are ES6 classes that extend `React.Component`. They have lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`, and manage state using `this.state` and `this.setState`."
+            },
+            {
+                "id": 367,
+                "question": "Q367. What is the purpose of the render() method in a class component?",
+                "answer": "The `render()` method in a class component is responsible for returning JSX, which defines the UI of the component. It is required in class components and is called every time the component re-renders."
+            },
+            {
+                "id": 368,
+                "question": "Q368. How do you manage state in a class component?",
+                "answer": "State in a class component is managed using `this.state` for initialization and `this.setState()` for updating the state. These methods allow class components to maintain dynamic data and trigger re-renders when the state changes."
+            },
+            {
+                "id": 369,
+                "question": "Q369. What are lifecycle methods in class components?",
+                "answer": "Lifecycle methods in class components include methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`. These methods allow developers to run code at specific points during a component's lifecycle, such as when it's created, updated, or destroyed."
+            },
+            {
+                "id": 370,
+                "question": "Q370. How do you bind event handlers in class components?",
+                "answer": "Event handlers in class components are typically bound using `.bind(this)` in the constructor, or by using arrow functions in the method or JSX. This ensures that `this` refers to the component instance when the event handler is called."
+            },
+            {
+                "id": 371,
+                "question": "Q371. What is shouldComponentUpdate, and when is it used?",
+                "answer": "The `shouldComponentUpdate()` method is used in class components to optimize re-renders. It allows you to prevent unnecessary re-renders by returning `false` if the component doesn't need to update based on changes in props or state."
+            },
+            {
+                "id": 372,
+                "question": "Q372. What is the significance of this.props in a class component?",
+                "answer": "In class components, `this.props` refers to the properties passed down from the parent component. It is used to access values or functions provided to the component and is immutable."
+            },
+            {
+                "id": 373,
+                "question": "Q373. What is the purpose of the constructor in a class component?",
+                "answer": "The constructor in a class component is used to initialize state and bind event handlers to the component. It is called when a new instance of the component is created."
+            },
+            {
+                "id": 374,
+                "question": "Q374. Why did functional components become more popular than class components?",
+                "answer": "Functional components became more popular due to the introduction of hooks in React. Hooks allow functional components to manage state, lifecycle features, and side effects, which was previously only possible in class components. Functional components are simpler and offer better performance."
+            },
+            {
+                "id": 375,
+                "question": "Q375. How do you use props in a functional component?",
+                "answer": "In a functional component, `props` are passed as arguments to the function. You can access the properties and values inside the component by referring to the `props` object."
+            },
+            {
+                "id": 376,
+                "question": "Q376. What are hooks in React?",
+                "answer": "Hooks are functions that allow you to use state and other React features in functional components. Common hooks include `useState`, `useEffect`, `useContext`, and `useRef`. They make functional components more powerful by providing state management and lifecycle capabilities."
+            },
+            {
+                "id": 377,
+                "question": "Q377. What is the useState hook, and how is it used?",
+                "answer": "The `useState` hook is used to add local state to functional components. It returns an array with two elements: the current state value and a function to update that value."
+            },
+            {
+                "id": 378,
+                "question": "Q378. What is the useEffect hook, and how does it replace lifecycle methods?",
+                "answer": "The `useEffect` hook is used to handle side effects such as data fetching, subscriptions, or DOM manipulation. It replaces lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in functional components."
+            },
+            {
+                "id": 379,
+                "question": "Q379. How do you create a functional component in React?",
+                "answer": "You create a functional component in React by defining a JavaScript function that returns JSX. You can use either regular functions or ES6 arrow functions."
+            },
+            {
+                "id": 380,
+                "question": "Q380. How can you optimize functional components?",
+                "answer": "You can optimize functional components by using `React.memo` to memoize them and prevent unnecessary re-renders when props have not changed. This is particularly useful for performance optimization in large applications."
+            },
+            {
+                "id": 381,
+                "question": "Q381. What are the main differences between functional components and class components?",
+                "answer": "The main differences between functional components and class components lie in syntax, state handling, and lifecycle methods. Functional components are simpler and use hooks like `useState` and `useEffect` for state and side effects, whereas class components rely on `this.state` and `this.setState` for state and lifecycle methods like `componentDidMount` and `componentDidUpdate`. Functional components are typically more performant and easier to read, while class components provide more built-in features for complex scenarios."
+            },
+            {
+                "id": 382,
+                "question": "Q382. How do hooks make functional components more powerful than class components?",
+                "answer": "Hooks allow functional components to use state, side effects, context, refs, and more, making them as powerful as class components. Before hooks, functional components were stateless and lacked lifecycle features, but with hooks like `useState` for state management and `useEffect` for lifecycle methods, functional components can now handle everything that class components can, in a simpler and more concise way."
+            },
+            {
+                "id": 383,
+                "question": "Q383. Can you use lifecycle methods in functional components? Why or why not?",
+                "answer": "No, you cannot use lifecycle methods like `componentDidMount` or `componentDidUpdate` in functional components. These methods are specific to class components. However, hooks like `useEffect` in functional components serve a similar purpose, allowing you to handle side effects such as data fetching or subscribing to events."
+            },
+            {
+                "id": 384,
+                "question": "Q384. How would you convert a class component to a functional component?",
+                "answer": "To convert a class component to a functional component, you would rewrite the class using a function that accepts `props`. State management in the class would be replaced by `useState` for local state, and lifecycle methods like `componentDidMount` or `componentDidUpdate` would be replaced by the `useEffect` hook. Event handlers and methods are typically converted into simple functions within the functional component."
+            },
+            {
+                "id": 385,
+                "question": "Q385. What is React’s recommendation regarding class components vs. functional components?",
+                "answer": "React recommends using functional components with hooks for most use cases. Functional components are simpler, easier to maintain, and more performant. With the introduction of hooks, functional components can now handle state, side effects, and context without the complexity of class components."
+            },
+            {
+                "id": 386,
+                "question": "Q386. When would you use a class component over a functional component?",
+                "answer": "You might use a class component over a functional component in scenarios like maintaining legacy codebases or dealing with features that require older lifecycle methods, or in rare cases when working with certain third-party libraries that may require class components. However, for most new development, functional components with hooks are recommended."
+            },
+            {
+                "id": 387,
+                "question": "Q387. How do you pass state from a class component to a functional component?",
+                "answer": "To pass state from a class component to a functional component, you pass the state as `props` to the functional component. The functional component can then access the state values via `props` and render them accordingly."
+            },
+            {
+                "id": 388,
+                "question": "Q388. How would you implement a simple counter in a class component vs. a functional component?",
+                "answer": "In a class component, the counter would use `this.state` for the current count and `this.setState()` to update the state. In a functional component, `useState` would be used to initialize and update the counter state. Here are simple examples for both: \nClass Component: \n```class Counter extends React.Component { \n   state = { count: 0 }; \n   increment = () => { this.setState({ count: this.state.count + 1 }); }; \n   render() { return <button onClick={this.increment}>Count: {this.state.count}</button>; } \n}``` \nFunctional Component: \n```const Counter = () => { \n   const [count, setCount] = useState(0); \n   return <button onClick={() => setCount(count + 1)}>Count: {count}</button>; \n}```"
+            },
+            {
+                "id": 389,
+                "question": "Q389. How do you handle event handlers in functional components?",
+                "answer": "Event handlers in functional components can be handled by defining functions either inline as arrow functions within JSX or by defining them as separate functions outside the JSX. The preferred method is to use inline arrow functions when simple or external functions for reusable handlers."
+            },
+            {
+                "id": 390,
+                "question": "Q390. How do you fetch data in a functional component?",
+                "answer": "To fetch data in a functional component, you would use the `useEffect` hook, which allows you to run side effects such as fetching data when the component mounts or updates. The `useEffect` hook can also handle cleanup, such as cancelling ongoing network requests. Example: \n```const Component = () => { \n   const [data, setData] = useState(null); \n   useEffect(() => { \n     fetch('https://api.example.com') \n       .then(res => res.json()) \n       .then(data => setData(data)); \n   }, []); \n   return <div>{data ? JSON.stringify(data) : 'Loading...'}</div>; \n};```"
+            },
+            {
+                "id": 391,
+                "question": "Q391. What are some challenges of converting class components to functional components?",
+                "answer": "Challenges in converting class components to functional components include handling complex lifecycle methods like `componentDidMount`, `componentDidUpdate`, or `componentWillUnmount`, which need to be replaced with `useEffect`. Additionally, managing large states and complex interactions may require refactoring logic to work with hooks like `useReducer` or `useState` in functional components. Ensuring that the functionality is preserved and testing after conversion is also critical."
+            },
+            {
+                "id": 392,
+                "question": "Q392. What is React?",
+                "answer": "React is a JavaScript library used for building user interfaces, primarily for single-page applications. It allows developers to create reusable components that efficiently update and render UI based on data changes. React focuses on the view layer and can be integrated with other libraries or frameworks for routing, state management, and more."
+            },
+            {
+                "id": 393,
+                "question": "Q393. What are the key features of React?",
+                "answer": "The key features of React include the Virtual DOM for efficient rendering, JSX for writing HTML-like syntax in JavaScript, component-based architecture for reusability, one-way data binding for predictable data flow, and a declarative approach to UI rendering, which allows developers to describe what the UI should look like based on the state."
+            },
+            {
+                "id": 394,
+                "question": "Q394. What is the difference between React and Angular/Vue?",
+                "answer": "React is a JavaScript library focused on the UI layer, whereas Angular and Vue are full-fledged frameworks that provide solutions for routing, state management, and more. React is more flexible and allows developers to choose additional libraries for other features, while Angular and Vue come with a more opinionated structure and integrated solutions. React's ecosystem is vast but less prescriptive compared to Angular and Vue."
+            },
+            {
+                "id": 395,
+                "question": "Q395. What is JSX? Why is it used?",
+                "answer": "JSX (JavaScript XML) is a syntax extension for JavaScript that allows developers to write HTML-like code within JavaScript. It is used in React to describe the structure of the UI. JSX provides a more readable and concise way to write components, and it is later transpiled into JavaScript by tools like Babel."
+            },
+            {
+                "id": 396,
+                "question": "Q396. What are components in React?",
+                "answer": "Components in React are reusable building blocks that define how a UI should appear based on the current state and props. They are the fundamental unit of React applications, allowing the UI to be broken down into smaller, manageable, and reusable parts."
+            },
+            {
+                "id": 397,
+                "question": "Q397. What is the difference between a class component and a functional component?",
+                "answer": "Class components are ES6 classes that extend `React.Component` and have access to lifecycle methods and state management through `this.state` and `this.setState()`. Functional components are simple JavaScript functions that accept props and return JSX. With the introduction of hooks, functional components can now manage state and side effects, making them more powerful than class components in most cases."
+            },
+            {
+                "id": 398,
+                "question": "Q398. What are props in React?",
+                "answer": "Props (short for properties) are read-only inputs to components that are passed from a parent to a child. They allow data to flow from parent components to child components and are used to configure and customize the behavior of a component."
+            },
+            {
+                "id": 399,
+                "question": "Q399. What is the purpose of the key attribute in React?",
+                "answer": "The `key` attribute is used in React to uniquely identify elements in a list. It helps React optimize the rendering process by efficiently updating the DOM when the list changes. `key` ensures that React can quickly identify which items have changed, been added, or removed."
+            },
+            {
+                "id": 400,
+                "question": "Q400. How do you pass data between components in React?",
+                "answer": "Data is passed between components in React using props. A parent component passes data down to a child component via attributes in JSX, and the child component can access this data through the `props` object."
+            },
+            {
+                "id": 401,
+                "question": "Q401. What are default props in React?",
+                "answer": "Default props are predefined values that a component can use if a specific prop is not passed. They are set using `defaultProps` and ensure that a component has consistent behavior even when some props are omitted."
+            },
+            {
+                "id": 402,
+                "question": "Q402. What is state in React?",
+                "answer": "State in React refers to a component’s local, dynamic data that can change over time. It is used to store information about the component and determine how it should render. State is mutable and is typically managed within the component itself."
+            },
+            {
+                "id": 403,
+                "question": "Q403. How do you manage state in a React component?",
+                "answer": "In class components, state is managed using `this.state` to initialize state and `this.setState()` to update it. In functional components, state is managed using the `useState` hook, which provides a pair of values: the current state and a function to update it."
+            },
+            {
+                "id": 404,
+                "question": "Q404. What is the difference between state and props?",
+                "answer": "State is mutable and managed within a component, whereas props are immutable and passed down from a parent component. State represents internal data that can change, while props represent external data that is passed into the component."
+            },
+            {
+                "id": 405,
+                "question": "Q405. What are React lifecycle methods?",
+                "answer": "Lifecycle methods are special methods in class components that get called at specific points during a component's life, such as when the component mounts, updates, or unmounts. Common lifecycle methods include `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`."
+            },
+            {
+                "id": 406,
+                "question": "Q406. How does useEffect replace lifecycle methods in functional components?",
+                "answer": "The `useEffect` hook allows functional components to perform side effects, such as data fetching, subscriptions, or manual DOM manipulations. It serves the role of several lifecycle methods (`componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`) in class components, running after render and cleaning up when necessary."
+            },
+            {
+                "id": 407,
+                "question": "Q407. What is the Virtual DOM? How does it work?",
+                "answer": "The Virtual DOM is a lightweight representation of the real DOM. React uses it to optimize rendering by making changes to the virtual DOM first and then efficiently updating the actual DOM only when necessary, reducing the number of direct DOM manipulations and improving performance."
+            },
+            {
+                "id": 408,
+                "question": "Q408. What is one-way data binding in React?",
+                "answer": "One-way data binding in React refers to the unidirectional flow of data from parent to child components through props. This ensures that data is passed down in a predictable manner, and any changes in the state are reflected in the component's UI."
+            },
+            {
+                "id": 409,
+                "question": "Q409. What are higher-order components (HOCs)?",
+                "answer": "Higher-order components (HOCs) are functions that take a component as an argument and return a new component with additional behavior or functionality. HOCs are used for cross-cutting concerns like authentication, logging, or fetching data."
+            },
+            {
+                "id": 410,
+                "question": "Q410. What are React fragments?",
+                "answer": "React fragments allow you to group multiple elements without adding extra nodes to the DOM. This is useful when you need to return multiple elements from a component but don’t want to introduce an unnecessary parent element."
+            },
+            {
+                "id": 411,
+                "question": "Q411. What are controlled and uncontrolled components?",
+                "answer": "Controlled components in React are those where form input elements (like text inputs, checkboxes) are managed by React state. Uncontrolled components, on the other hand, rely on the DOM itself for managing form input values, and React only interacts with them when necessary."
+            },
+            {
+                "id": 412,
+                "question": "Q412. How do you conditionally render elements in React?",
+                "answer": "You can conditionally render elements in React using different techniques like `if-else`, ternary operators, and logical `&&`. For example, with `if-else` you can render based on a condition: `if (isLoggedIn) { return <Welcome />; } else { return <Login />; }`. With a ternary operator: `{isLoggedIn ? <Welcome /> : <Login />}`. For short-circuiting, you can use `&&`: `{isLoggedIn && <Welcome />}`. This ensures that only one element is rendered based on the condition."
+            },
+            {
+                "id": 413,
+                "question": "Q413. How do you handle lists in React?",
+                "answer": "To handle lists in React, you can use the `map()` function to iterate over an array of items and render each one as a component. Each element in the list must have a unique `key` to help React efficiently update and track the elements. For example: `const items = ['apple', 'banana', 'cherry']; return items.map(item => <li key={item}>{item}</li>);`."
+            },
+            {
+                "id": 414,
+                "question": "Q414. How do you handle forms in React?",
+                "answer": "In React, forms are typically handled using controlled components, where form elements like `input`, `textarea`, and `select` are bound to React state. When the user interacts with the form, the input value is updated in the state, and the UI reflects this change. For example: `<input type="text" value={this.state.name} onChange={e => this.setState({ name: e.target.value })} />`."
+            },
+            {
+                "id": 415,
+                "question": "Q415. How do you update a state based on a previous state?",
+                "answer": "To update the state based on its previous value in React, you should use the functional form of `useState` or `setState` in class components. This ensures that you're working with the most up-to-date state. For example: `setState(prevState => ({ count: prevState.count + 1 }))` or in a functional component: `setCount(prevCount => prevCount + 1)`. This ensures safe updates when state relies on its current value."
+            },
+            {
+                "id": 416,
+                "question": "Q416. How do you pass a method from a parent to a child component?",
+                "answer": "In React, methods can be passed from a parent to a child component through props. You define the method in the parent and pass it as a prop to the child component. The child can then call the function via `props`. For example: `ParentComponent: <ChildComponent onClick={this.handleClick} />`, and in the `ChildComponent`: `this.props.onClick()`. This allows the child to invoke the parent’s method."
+            },
+            {
+                "id": 417,
+                "question": "Q417. What is React Fiber?",
+                "answer": "React Fiber is a complete rewrite of the React core algorithm that improves the rendering process. It enhances React's ability to handle complex updates and manage UI responsiveness, enabling features like prioritization of updates, incremental rendering, and better support for asynchronous rendering. React Fiber provides better performance, especially for large applications and complex UIs."
+            },
+            {
+                "id": 418,
+                "question": "Q418. What are synthetic events in React?",
+                "answer": "Synthetic events in React are cross-browser wrappers around native DOM events. They normalize events to ensure consistent behavior across all browsers, and React uses its synthetic event system to handle events more efficiently. These events are automatically pooled to improve performance and avoid memory leaks, and they have the same API as native events."
+            },
+            {
+                "id": 419,
+                "question": "Q419. Explain the use of propTypes in React.",
+                "answer": "PropTypes in React are used for type-checking the props that are passed to components. It ensures that the correct data types are passed and provides a warning in the development console if the expected prop type does not match. You can use PropTypes to enforce rules like requiring a string, number, or a specific shape for an object passed as props, improving code reliability and maintainability."
+            },
+            {
+                "id": 420,
+                "question": "Q420. What are controlled inputs?",
+                "answer": "Controlled inputs in React are form elements whose values are controlled by React state. The value of the input is set through React state, and any changes to the input trigger a state update. This allows React to control the form element and ensures that the UI is in sync with the application’s state. For example: `<input type='text' value={this.state.inputValue} onChange={e => this.setState({ inputValue: e.target.value })} />`."
+            },
+            {
+                "id": 421,
+                "question": "Q421. What are animations in React, and how can they be implemented?",
+                "answer": "Animations in React can be implemented using CSS or JavaScript libraries like React Transition Group or Framer Motion. React Transition Group provides components like `Transition` and `CSSTransition` that manage the timing and lifecycle of animations. React can also integrate with third-party libraries like GSAP for more complex animations. Animations are commonly used to transition elements in and out of the DOM or to animate style properties like opacity and position."
+            },
+            {
+                "id": 422,
+                "question": "Q422. What are React DevTools?",
+                "answer": "React DevTools is a browser extension (available for Chrome and Firefox) that allows developers to inspect and debug React components in the browser. It provides an interactive interface for examining the component tree, checking props and state, and viewing component render timings. React DevTools helps developers analyze performance, troubleshoot issues, and gain insights into how React applications behave."
+            },
+            {
+                "id": 423,
+                "question": "Q423. How do you handle accessibility in React applications?",
+                "answer": "To handle accessibility in React, you should follow best practices such as ensuring proper semantic HTML elements (e.g., using `<button>` instead of `<div>` for interactive elements), adding ARIA (Accessible Rich Internet Applications) attributes, and ensuring keyboard navigability. React also provides `ref` for managing focus and event handling, and libraries like `react-aria` can assist in improving accessibility. Additionally, running accessibility audits with tools like Axe can help identify and resolve accessibility issues."
+            },
+            {
+                "id": 424,
+                "question": "Q424. What are some best practices for writing React code?",
+                "answer": "Some best practices for writing React code include: 1) Keeping components small and focused on a single responsibility. 2) Using functional components and hooks instead of class components where possible. 3) Using PropTypes or TypeScript for type safety. 4) Keeping state minimal and lifting state up when necessary. 5) Using `useEffect` for side effects and avoiding unnecessary side effects. 6) Optimizing performance by memoizing components with `React.memo` and using `useCallback` for functions. 7) Managing component side effects and ensuring proper cleanup. 8) Following consistent naming conventions and keeping the component structure modular."
             }
         ]
     },
