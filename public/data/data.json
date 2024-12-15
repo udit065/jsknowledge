@@ -846,53 +846,408 @@
         "data": [
             {
                 "id": 1,
-                "question": "What is React?",
+                "question": "Q1. What is React?",
                 "answer": "React is a JavaScript library for building user interfaces, particularly single-page applications, by creating reusable UI components."
             },
             {
                 "id": 2,
-                "question": "What is JSX?",
-                "answer": "JSX is a syntax extension for JavaScript that looks similar to HTML and is used in React to describe UI elements."
+                "question": "Q2. What is JSX and how is it different from HTML?",
+                "answer": "JSX is a syntax extension for JavaScript that resembles HTML, but it is not HTML. Unlike HTML, JSX is processed by JavaScript and allows you to write HTML-like syntax directly within JavaScript. One major difference is that JSX requires elements to be wrapped in a single parent tag, while HTML can have multiple root elements."
             },
             {
                 "id": 3,
-                "question": "What are components in React?",
-                "answer": "Components are reusable pieces of UI in React. They can be class-based or functional and allow developers to break down complex interfaces into smaller parts."
+                "question": "Q3. How does React handle rendering and reconciliation?",
+                "answer": "React uses a virtual DOM to improve performance. When a component’s state or props change, React creates a virtual DOM representation of the UI, compares it with the previous virtual DOM, and calculates the minimal set of changes needed to update the actual DOM. This process is called reconciliation."
             },
             {
                 "id": 4,
-                "question": "What is state in React?",
-                "answer": "State is an object managed within a component that determines its behavior and how it renders. State changes trigger re-renders."
+                "question": "Q4. What are the lifecycle methods in React class components? Can you explain them briefly?",
+                "answer": "Lifecycle methods in React class components allow you to run code at specific points in a component's life cycle. Some common methods include: \n- `componentDidMount`: Invoked after the component is mounted. \n- `componentDidUpdate`: Invoked after the component updates. \n- `componentWillUnmount`: Invoked before the component is removed from the DOM."
             },
             {
                 "id": 5,
-                "question": "What are props in React?",
-                "answer": "Props (short for properties) are read-only inputs passed from parent to child components to customize or configure them."
+                "question": "Q5. What are React hooks? Can you explain some commonly used hooks like useState and useEffect?",
+                "answer": "React hooks are functions that allow you to use state and other React features in functional components. Common hooks include: \n- `useState`: A hook for adding state to functional components. \n- `useEffect`: A hook for handling side effects in functional components, such as fetching data or subscribing to events."
             },
             {
                 "id": 6,
-                "question": "What is the Virtual DOM?",
-                "answer": "The Virtual DOM is a lightweight copy of the real DOM that React uses to optimize UI rendering by updating only the necessary parts of the actual DOM."
+                "question": "Q6. How do you handle state in functional components?",
+                "answer": "In functional components, state is handled using the `useState` hook. It returns an array where the first element is the current state value and the second is a function to update that state."
             },
             {
                 "id": 7,
-                "question": "What is the difference between state and props?",
-                "answer": "State is mutable and managed within the component, while props are immutable and passed to components by their parent."
+                "question": "Q7. What is the purpose of useEffect and when would you use it?",
+                "answer": "The `useEffect` hook allows you to perform side effects in functional components, such as fetching data, updating the DOM, or subscribing to events. It is used to run code after render, and can also clean up side effects when the component unmounts or updates."
             },
             {
                 "id": 8,
-                "question": "What are React hooks?",
-                "answer": "Hooks are functions introduced in React 16.8 that allow developers to use state and other React features in functional components."
+                "question": "Q8. What are the differences between controlled and uncontrolled components?",
+                "answer": "Controlled components are React components that manage their own state and are typically used for form elements like inputs. The value of these components is controlled via React state. Uncontrolled components, on the other hand, manage their own state internally and do not require React state for value management."
             },
             {
                 "id": 9,
-                "question": "What is the useEffect hook?",
-                "answer": "The `useEffect` hook is used to perform side effects, such as data fetching or subscriptions, in functional components."
+                "question": "Q9. What is the Virtual DOM, and how does React use it to optimize performance?",
+                "answer": "The Virtual DOM is a lightweight copy of the actual DOM in memory. React uses it to optimize rendering by first making changes to the Virtual DOM and then comparing it with the real DOM to determine the minimal set of updates needed to apply to the actual DOM."
             },
             {
                 "id": 10,
-                "question": "What is React Router?",
-                "answer": "React Router is a library for managing navigation and routing in React applications, allowing developers to create single-page applications with dynamic URLs."
+                "question": "Q10. How do you pass data between components in React?",
+                "answer": "Data can be passed between components in React using props. Parent components pass data to child components through props, and child components can access that data by referencing the props object."
+            },
+            {
+                "id": 11,
+                "question": "Q11. What is the purpose of the key prop in React lists?",
+                "answer": "The `key` prop is used to uniquely identify each element in a list of elements in React. It helps React efficiently update and reconcile the DOM by tracking which elements have changed, been added, or removed."
+            },
+            {
+                "id": 12,
+                "question": "Q12. How can you optimize performance in a React application?",
+                "answer": "Performance can be optimized in React by using techniques like: \n- Memoization (`React.memo` or `useMemo`) to avoid unnecessary re-renders. \n- Code-splitting to load components lazily. \n- Optimizing component re-renders with `shouldComponentUpdate` or `PureComponent`. \n- Using the `useCallback` hook to memoize functions."
+            },
+            {
+                "id": 13,
+                "question": "Q13. How does React handle event binding in components?",
+                "answer": "In React, events are bound to methods in the component class using `this`. In functional components, event handlers are passed as callbacks directly or with arrow functions, which automatically bind the `this` context."
+            },
+            {
+                "id": 14,
+                "question": "Q14. What is the Context API in React, and when would you use it?",
+                "answer": "The Context API allows you to share state or data across a tree of components without passing props down manually at every level. It is useful for global state management or when you need to avoid prop-drilling."
+            },
+            {
+                "id": 15,
+                "question": "Q15. How do you manage state in a large-scale React application?",
+                "answer": "In large-scale React applications, state can be managed using a combination of local component state, the Context API for global state, or external state management libraries like Redux or Zustand."
+            },
+            {
+                "id": 16,
+                "question": "Q16. What is the difference between React.Component and React.PureComponent?",
+                "answer": "Both `React.Component` and `React.PureComponent` are used to define React class components, but `React.PureComponent` automatically implements `shouldComponentUpdate` with a shallow comparison of props and state, preventing unnecessary re-renders for unchanged components."
+            },
+            {
+                "id": 17,
+                "question": "Q17. Can you explain the concept of Higher Order Components (HOCs)?",
+                "answer": "Higher Order Components (HOCs) are functions that take a component and return a new component with enhanced behavior. HOCs are used for code reuse and can be used to add functionality like logging, authentication checks, or data fetching to a component."
+            },
+            {
+                "id": 18,
+                "question": "Q18. How would you handle forms in React?",
+                "answer": "Forms in React can be handled by using controlled components, where the form elements' values are bound to the component's state and updated using event handlers. Alternatively, uncontrolled components can be used when managing form state internally without involving React state."
+            },
+            {
+                "id": 19,
+                "question": "Q19. How do you handle conditional rendering in React?",
+                "answer": "Conditional rendering in React is typically done using JavaScript operators like `if`, ternary operators, or logical `&&` to render different UI components based on the component's state or props."
+            },
+            {
+                "id": 20,
+                "question": "Q20. What is React Router, and how does it help with navigation in React applications?",
+                "answer": "React Router is a library that enables navigation between different views or components in React applications. It allows for URL-based navigation and helps in managing routes and rendering specific components for different URLs."
+            },
+            {
+                "id": 21,
+                "question": "Q21. How do you handle errors in React applications (e.g., Error Boundaries)?",
+                "answer": "Errors in React applications can be handled using Error Boundaries, which are components that catch JavaScript errors in their child components, log those errors, and display a fallback UI to prevent the app from crashing."
+            },
+            {
+                "id": 22,
+                "question": "Q22. How does React handle component re-renders?",
+                "answer": "React re-renders components when their state or props change. The Virtual DOM helps minimize the number of updates required by determining which parts of the DOM need to be changed."
+            },
+            {
+                "id": 23,
+                "question": "Q23. What are PropTypes, and how can they help in React development?",
+                "answer": "PropTypes are used in React to validate the type and structure of props passed to a component. They help prevent bugs by ensuring that the props passed to a component match the expected types and structure."
+            },
+            {
+                "id": 24,
+                "question": "Q24. Can you explain the concept of 'lifting state up' in React?",
+                "answer": "Lifting state up refers to moving the state from a child component to a parent component so that the parent can pass the state down to multiple children, enabling shared access and control."
+            },
+            {
+                "id": 25,
+                "question": "Q25. What is Redux, and how is it different from React's built-in state management?",
+                "answer": "Redux is an external state management library that provides a central store for managing the state of an application. It uses actions and reducers to update the state. Unlike React's built-in state management, which is local to components, Redux provides a global store accessible from anywhere in the app."
+            },
+            {
+                "id": 26,
+                "question": "Q26. How do you handle asynchronous code or API calls in React?",
+                "answer": "Asynchronous code or API calls in React are typically handled using the `useEffect` hook for functional components or lifecycle methods like `componentDidMount` for class components. For managing API calls, `fetch` or third-party libraries like Axios are often used."
+            },
+            {
+                "id": 27,
+                "question": "Q27. What are React Components?",
+                "answer": "React components are reusable UI elements that can be either class-based or functional. They represent parts of the user interface and can accept inputs, called props, and manage their own state."
+            },
+            {
+                "id": 28,
+                "question": "Q28. What is the difference between a class component and a functional component?",
+                "answer": "Class components are ES6 classes that extend `React.Component` and can have lifecycle methods and internal state. Functional components are simpler and defined as functions, and with the introduction of hooks, they can also manage state and side effects."
+            },
+            {
+                "id": 29,
+                "question": "Q29. What are Hooks in React?",
+                "answer": "Hooks are functions that allow you to use state and other React features in functional components. Examples include `useState`, `useEffect`, and `useContext`."
+            },
+            {
+                "id": 30,
+                "question": "Q30. What is the Virtual DOM?",
+                "answer": "The Virtual DOM is a lightweight copy of the actual DOM. React uses it to optimize rendering by first making changes to the Virtual DOM, then calculating the minimal changes required to update the actual DOM."
+            },
+            {
+                "id": 31,
+                "question": "Q31. What are React's Lifecycle Methods?",
+                "answer": "Lifecycle methods in React class components allow you to run code at different stages of a component’s life, such as mounting, updating, and unmounting. Some examples include `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`."
+            },
+            {
+                "id": 32,
+                "question": "Q32. What is `useEffect` hook used for?",
+                "answer": "`useEffect` is used in functional components to perform side effects like data fetching, updating the DOM, or subscribing to external events after the component renders."
+            },
+            {
+                "id": 33,
+                "question": "Q33. What is `useState` hook?",
+                "answer": "`useState` is a React hook that allows functional components to have internal state. It returns a pair of values: the current state and a function to update that state."
+            },
+            {
+                "id": 34,
+                "question": "Q34. What are props and state in React?",
+                "answer": "Props are inputs passed from a parent component to a child component, and they are immutable. State is data managed within a component and can be updated, triggering re-renders."
+            },
+            {
+                "id": 35,
+                "question": "Q35. What is JSX?",
+                "answer": "JSX is a syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. It is used in React to define the UI structure in a more readable way."
+            },
+            {
+                "id": 36,
+                "question": "Q36. What is the purpose of the key prop in React lists?",
+                "answer": "The `key` prop is used to uniquely identify each element in a list of React components. This helps React efficiently update the DOM by tracking which items have changed, been added, or removed."
+            },
+            {
+                "id": 37,
+                "question": "Q37. What is React Router and how does it work?",
+                "answer": "React Router is a library for managing navigation in React applications. It enables dynamic routing, allowing users to navigate between different views or components without reloading the page."
+            },
+            {
+                "id": 38,
+                "question": "Q38. How does React handle events?",
+                "answer": "React handles events in a similar way to DOM events, but with some differences. React uses a synthetic event system that normalizes events across different browsers and provides event handlers like `onClick`, `onChange`, etc."
+            },
+            {
+                "id": 39,
+                "question": "Q39. What are controlled and uncontrolled components?",
+                "answer": "Controlled components are React components that manage their state via React state, such as form elements with values controlled by `useState`. Uncontrolled components manage their own internal state and do not rely on React state."
+            },
+            {
+                "id": 40,
+                "question": "Q40. What is Redux and how does it integrate with React?",
+                "answer": "Redux is a state management library that provides a central store for managing an application's state. It works with React by using the `connect` function or the `useSelector` and `useDispatch` hooks to link Redux state with React components."
+            },
+            {
+                "id": 41,
+                "question": "Q41. How can you optimize performance in a React application?",
+                "answer": "Performance can be optimized in React by techniques such as using `React.memo` to prevent unnecessary re-renders, code-splitting, lazy loading, avoiding inline functions, and using the `useCallback` and `useMemo` hooks."
+            },
+            {
+                "id": 42,
+                "question": "Q42. What are Higher Order Components (HOCs)?",
+                "answer": "Higher Order Components (HOCs) are functions that take a component and return a new component with enhanced functionality, typically used for code reuse like authentication, data fetching, or logging."
+            },
+            {
+                "id": 43,
+                "question": "Q43. What is the Context API and how is it used in React?",
+                "answer": "The Context API is a React feature that allows you to pass data through the component tree without manually passing props at each level. It is used to share state across many components at different nesting levels."
+            },
+            {
+                "id": 44,
+                "question": "Q44. What is the difference between `componentDidMount` and `useEffect`?",
+                "answer": "`componentDidMount` is a lifecycle method in class components that runs once after the component mounts. `useEffect` is a hook in functional components that can be used for similar purposes and is more flexible, as it can run after every render, or only when certain dependencies change."
+            },
+            {
+                "id": 45,
+                "question": "Q45. What are render props in React?",
+                "answer": "Render props is a pattern in React where a component uses a function passed as a prop to dynamically determine what to render. It allows for shared functionality between components while maintaining flexibility in rendering."
+            },
+            {
+                "id": 46,
+                "question": "Q46. What are Error Boundaries in React?",
+                "answer": "Error Boundaries are special components that catch JavaScript errors anywhere in their child component tree and display a fallback UI instead of crashing the app. They are defined using `static getDerivedStateFromError` and `componentDidCatch` in class components."
+            },
+            {
+                "id": 47,
+                "question": "Q47. What is the purpose of `React.memo`?",
+                "answer": "`React.memo` is a higher-order component that memoizes a component, preventing unnecessary re-renders when the props have not changed, optimizing performance in functional components."
+            },
+            {
+                "id": 48,
+                "question": "Q48. What is the difference between `React.createElement` and JSX?",
+                "answer": "`React.createElement` is a JavaScript function used to create React elements. JSX is a syntax extension that looks like HTML but is transpiled into `React.createElement` calls by Babel."
+            },
+            {
+                "id": 49,
+                "question": "Q49. How can you handle forms in React?",
+                "answer": "Forms in React can be handled using controlled components, where form input values are tied to React state. The state is updated through event handlers like `onChange`, allowing React to manage form data."
+            },
+            {
+                "id": 50,
+                "question": "Q50. What is the purpose of `React.StrictMode`?",
+                "answer": "`React.StrictMode` is a tool for highlighting potential problems in an application during development. It checks for unsafe lifecycle methods, deprecated APIs, and other issues, but does not impact production builds."
+            },
+            {
+                "id": 51,
+                "question": "Q51. What are some common performance issues in React applications?",
+                "answer": "Some common performance issues in React applications include unnecessary re-renders, large bundle sizes, deep component trees, inefficient state management, and unoptimized rendering of complex components or lists."
+            },
+            {
+                "id": 52,
+                "question": "Q52. How does React optimize rendering performance?",
+                "answer": "React optimizes rendering performance using techniques like the Virtual DOM, efficient diffing algorithms, component re-rendering only when necessary, and memoization with `React.memo`, `useMemo`, and `useCallback`."
+            },
+            {
+                "id": 53,
+                "question": "Q53. What is `React.memo`, and how does it improve performance?",
+                "answer": "`React.memo` is a higher-order component that prevents unnecessary re-renders of functional components by memoizing the result and only re-rendering the component when its props change."
+            },
+            {
+                "id": 54,
+                "question": "Q54. What is the role of `useMemo` and `useCallback` hooks?",
+                "answer": "`useMemo` is used to memoize expensive computations so they are not recalculated on every render. `useCallback` is used to memoize functions to prevent them from being recreated on every render, which can improve performance when passing functions to child components."
+            },
+            {
+                "id": 55,
+                "question": "Q55. What are the key differences between `React.memo` and `useMemo`?",
+                "answer": "`React.memo` is a higher-order component that memoizes entire components to prevent unnecessary re-renders, while `useMemo` is a hook that memoizes specific values or computations within a component. `React.memo` is for components, while `useMemo` is for values or calculations."
+            },
+            {
+                "id": 56,
+                "question": "Q56. How do you handle performance optimization in large lists?",
+                "answer": "Performance optimization in large lists can be achieved by techniques like virtualized lists (e.g., using libraries like `react-window` or `react-virtualized`), pagination, and lazy loading. These methods render only the visible items, improving performance for large datasets."
+            },
+            {
+                "id": 57,
+                "question": "Q57. What is code-splitting, and how does it improve performance?",
+                "answer": "Code-splitting is the process of breaking up a large bundle of JavaScript code into smaller, more manageable chunks, which can be loaded on demand. This reduces initial loading time and ensures that only the necessary code is loaded when needed, improving performance."
+            },
+            {
+                "id": 58,
+                "question": "Q58. How does the Profiler API in React help optimize performance?",
+                "answer": "The Profiler API allows developers to measure the performance of React components by tracking how often they re-render and the time taken for each render. This helps identify performance bottlenecks and optimize rendering."
+            },
+            {
+                "id": 59,
+                "question": "Q59. What is the role of bundle analyzers in React applications?",
+                "answer": "Bundle analyzers, such as `webpack-bundle-analyzer`, provide a visual representation of the size and contents of JavaScript bundles. They help developers identify large dependencies, optimize bundle size, and improve loading times."
+            },
+            {
+                "id": 60,
+                "question": "Q60. How does avoiding inline functions in props improve performance?",
+                "answer": "Avoiding inline functions in props prevents unnecessary re-creations of functions on every render. This can reduce unnecessary re-renders of child components, which improves performance by ensuring that props references remain stable."
+            },
+            {
+                "id": 61,
+                "question": "Q61. What is a Higher-Order Component (HOC)?",
+                "answer": "A Higher-Order Component (HOC) is a function that takes a component and returns a new component with enhanced functionality. HOCs are used for code reuse and adding features like authentication, data fetching, or logging to components."
+            },
+            {
+                "id": 62,
+                "question": "Q62. What are some common use cases for HOCs?",
+                "answer": "Common use cases for HOCs include adding authentication checks, data fetching, handling errors, adding analytics tracking, and sharing state or logic between components without modifying the original component."
+            },
+            {
+                "id": 63,
+                "question": "Q63. How is an HOC different from a regular React component?",
+                "answer": "An HOC is not a standalone component but a function that takes a component and returns a new one. Unlike regular components, HOCs don't render anything directly; instead, they enhance or modify the behavior of the wrapped component."
+            },
+            {
+                "id": 64,
+                "question": "Q64. What is the syntax for creating an HOC?",
+                "answer": "The syntax for creating an HOC is a function that accepts a component as an argument and returns a new component. Example: `function withSomething(WrappedComponent) { return function(props) { return <WrappedComponent {...props} />; } }`."
+            },
+            {
+                "id": 65,
+                "question": "Q65. What are the limitations of HOCs?",
+                "answer": "Limitations of HOCs include difficulty in debugging (as HOCs can obscure the original component's identity), issues with static properties (like `displayName`), and the potential for prop name collisions if not carefully managed."
+            },
+            {
+                "id": 66,
+                "question": "Q66. How do you handle props conflicts in HOCs?",
+                "answer": "To handle prop conflicts in HOCs, you can rename the props in the HOC before passing them to the wrapped component using techniques like destructuring or using specific prop names to avoid overriding the existing props of the component."
+            },
+            {
+                "id": 67,
+                "question": "Q67. What are some alternatives to HOCs in modern React?",
+                "answer": "Alternatives to HOCs in modern React include custom hooks and the Context API. These approaches allow for stateful logic and behavior sharing across components without the need for wrapping components in a higher-order function."
+            },
+            {
+                "id": 68,
+                "question": "Q68. How does React’s component tree structure affect HOCs?",
+                "answer": "The structure of React’s component tree can affect HOCs because they modify the tree by wrapping components, potentially leading to performance issues or difficulties in managing prop conflicts. The deeper the component tree, the more complex it can be to apply HOCs."
+            },
+            {
+                "id": 69,
+                "question": "Q69. What is Server-Side Rendering (SSR) in React?",
+                "answer": "Server-Side Rendering (SSR) in React is the process of rendering a React application on the server rather than in the browser. The server sends a fully rendered HTML page to the client, which improves initial load time and SEO."
+            },
+            {
+                "id": 70,
+                "question": "Q70. What are the benefits of SSR?",
+                "answer": "The benefits of SSR include improved SEO (as search engines can crawl pre-rendered HTML), faster initial page loads (since the HTML is already rendered), and better performance on slower networks or devices."
+            },
+            {
+                "id": 71,
+                "question": "Q71. What libraries can you use for SSR in React?",
+                "answer": "Libraries for SSR in React include Next.js, ReactDOMServer (for rendering React on the server), and Razzle. These libraries provide tools for easily implementing SSR with React."
+            },
+            {
+                "id": 72,
+                "question": "Q72. What is the difference between SSR and CSR (Client-Side Rendering)?",
+                "answer": "In SSR (Server-Side Rendering), the React app is rendered on the server and sent to the client as HTML, improving load times and SEO. In CSR (Client-Side Rendering), the app is rendered on the client-side using JavaScript, with the browser downloading the app’s JavaScript bundle first before rendering the page."
+            },
+            {
+                "id": 73,
+                "question": "Q73. How does hydration work in SSR?",
+                "answer": "Hydration in SSR refers to the process of React taking over a server-rendered HTML page by attaching event listeners and initializing the React components. This process allows the server-rendered content to become interactive without needing to re-render the entire page."
+            },
+            {
+                "id": 74,
+                "question": "Q74. What are some challenges of implementing SSR in React?",
+                "answer": "Challenges of implementing SSR in React include ensuring compatibility between server and client environments, managing the initial load time, handling dynamic data fetching and state hydration, and optimizing performance for both server and client rendering."
+            },
+            {
+                "id": 75,
+                "question": "Q75. What is the role of `getServerSideProps` in Next.js?",
+                "answer": "`getServerSideProps` in Next.js is used to fetch data on the server side before rendering a page. This function is executed on the server for every request, providing the data needed to pre-render the page, ensuring SEO optimization and fast initial loading."
+            },
+            {
+                "id": 76,
+                "question": "Q76. How do you handle API calls in SSR?",
+                "answer": "In SSR, API calls are typically handled within server-side functions like `getServerSideProps` or `getInitialProps` in Next.js. The API call is made on the server before the page is rendered, and the data is passed to the React component as props."
+            },
+            {
+                "id": 77,
+                "question": "Q77. What are the key differences between SSR and CSR?",
+                "answer": "The key differences between SSR (Server-Side Rendering) and CSR (Client-Side Rendering) are: SSR renders the HTML on the server and sends it to the client, which improves SEO and initial load time; CSR renders the HTML on the client side after downloading JavaScript, which allows for a more interactive experience but can be slower initially."
+            },
+            {
+                "id": 78,
+                "question": "Q78. When would you choose SSR over CSR?",
+                "answer": "You would choose SSR over CSR when SEO is a priority (e.g., for public-facing websites), when faster initial load times are essential, or when you need to ensure that content is available to users who may have JavaScript disabled or slow network connections."
+            },
+            {
+                "id": 79,
+                "question": "Q79. What are the drawbacks of SSR compared to CSR?",
+                "answer": "Drawbacks of SSR compared to CSR include more complexity in setup, potential performance issues due to server load and slower server-side rendering, difficulties in managing dynamic data and real-time updates, and longer time to first byte (TTFB) compared to CSR."
+            },
+            {
+                "id": 80,
+                "question": "Q80. How does CSR affect SEO, and how can it be improved?",
+                "answer": "CSR can negatively affect SEO because search engines may struggle to index content that is rendered dynamically on the client side. To improve SEO, developers can use techniques like server-side rendering, static site generation (SSG), or prerendering content for search engines to crawl."
+            },
+            {
+                "id": 81,
+                "question": "Q81. Can you mix SSR and CSR in a React application?",
+                "answer": "Yes, you can mix SSR and CSR in a React application. This approach is called hybrid rendering, where SSR is used to render the initial page on the server for SEO and faster load times, and CSR is used for subsequent page interactions and dynamic content."
             }
         ]
     },
