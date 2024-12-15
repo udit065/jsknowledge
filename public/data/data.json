@@ -1248,6 +1248,851 @@
                 "id": 81,
                 "question": "Q81. Can you mix SSR and CSR in a React application?",
                 "answer": "Yes, you can mix SSR and CSR in a React application. This approach is called hybrid rendering, where SSR is used to render the initial page on the server for SEO and faster load times, and CSR is used for subsequent page interactions and dynamic content."
+            },
+            {
+                "id": 82,
+                "question": "Q82. What are the advantages of SSG?",
+                "answer": "The advantages of Static Site Generation (SSG) include faster load times, better SEO (since the content is pre-rendered), reduced server load (since pages are served as static files), and improved performance for repeat visits, as the content is pre-built and cached."
+            },
+            {
+                "id": 83,
+                "question": "Q83. How is SSG different from SSR?",
+                "answer": "SSG (Static Site Generation) pre-renders pages at build time, generating static HTML files that are served to the client. SSR (Server-Side Rendering), on the other hand, renders pages dynamically on the server for each request, which can lead to slower response times compared to SSG."
+            },
+            {
+                "id": 84,
+                "question": "Q84. What is the role of `getStaticProps` in Next.js?",
+                "answer": "`getStaticProps` is a function in Next.js that is used for static site generation. It allows you to fetch data at build time, and the data is then passed to the page as props, enabling the creation of pre-rendered pages with static content."
+            },
+            {
+                "id": 85,
+                "question": "Q85. What is Incremental Static Regeneration (ISR) in Next.js?",
+                "answer": "Incremental Static Regeneration (ISR) in Next.js allows you to update static pages after the site has been built, without needing to rebuild the entire site. It enables pages to be regenerated in the background based on a defined revalidation interval, providing dynamic content while still benefiting from static generation."
+            },
+            {
+                "id": 86,
+                "question": "Q86. What types of applications are best suited for SSG?",
+                "answer": "SSG is best suited for applications where content does not change frequently, such as blogs, marketing websites, documentation, and e-commerce sites with static product pages. It's ideal for pages that can be generated at build time and don't require frequent updates."
+            },
+            {
+                "id": 87,
+                "question": "Q87. What are the challenges of using SSG?",
+                "answer": "Challenges of using SSG include handling dynamic content that requires frequent updates, long build times for large websites, the need for content to be known at build time, and the inability to serve real-time data without re-generating static pages."
+            },
+            {
+                "id": 88,
+                "question": "Q88. How can SSG be combined with client-side rendering?",
+                "answer": "SSG can be combined with client-side rendering (CSR) by pre-generating static pages for SEO and performance, and then using CSR for dynamic interactions, such as user-generated content, real-time data fetching, or interactivity on the page. This hybrid approach provides the benefits of both static and dynamic rendering."
+            },
+            {
+                "id": 89,
+                "question": "Q89. What is the difference between prerendering and hydration in SSG?",
+                "answer": "Pre-rendering refers to the process of generating static HTML for a page at build time (SSG), while hydration is the process of attaching event listeners and making the page interactive on the client side by running React on the pre-rendered HTML. Hydration is necessary for turning a static page into a dynamic, client-side app."
+            },
+            {
+                "id": 90,
+                "question": "Q90. What is Zustand?",
+                "answer": "Zustand is a small, fast, and scalable state management library for React. It provides a simple and minimal API to manage state without the need for reducers or actions, and it uses hooks for accessing and updating state in React components."
+            },
+            {
+                "id": 91,
+                "question": "Q91. How does Zustand compare to Context API and Redux?",
+                "answer": "Zustand is simpler and more lightweight compared to Redux, as it does not require actions or reducers. It also avoids the performance pitfalls of the Context API by allowing fine-grained control over re-renders. While Redux and Context API are more suited for complex state management in larger applications, Zustand is ideal for smaller, simpler applications."
+            },
+            {
+                "id": 92,
+                "question": "Q92. What are the core features of Zustand?",
+                "answer": "Core features of Zustand include an easy-to-use API, support for both local and global state, no boilerplate (like reducers or actions), reactivity, and the ability to create multiple stores. It also integrates well with React's hooks system and offers middleware support for logging, persistence, and more."
+            },
+            {
+                "id": 93,
+                "question": "Q93. How does Zustand handle re-renders?",
+                "answer": "Zustand minimizes unnecessary re-renders by only triggering re-renders in components that use the specific state being updated. It achieves this with a fine-grained subscription mechanism, which avoids the broad re-rendering of all components using the global state."
+            },
+            {
+                "id": 94,
+                "question": "Q94. Can Zustand persist state across sessions?",
+                "answer": "Yes, Zustand can persist state across sessions by using middleware like `zustand/persist`. This allows state to be saved to localStorage or sessionStorage, so the state can be reloaded when the user returns to the application."
+            },
+            {
+                "id": 95,
+                "question": "Q95. What are some use cases for Zustand?",
+                "answer": "Use cases for Zustand include managing simple global state, persisting state across sessions, handling local component-level state, building forms with reactive state, and managing state in small to medium-sized React applications where Redux or Context API might be overkill."
+            },
+            {
+                "id": 96,
+                "question": "Q96. What are controlled components in React?",
+                "answer": "Controlled components in React are form elements (like input, textarea, or select) whose value is controlled by the state of the parent component. The value of the form element is set by the state and is updated through state changes, ensuring a one-way data flow."
+            },
+            {
+                "id": 97,
+                "question": "Q97. What are uncontrolled components in React?",
+                "answer": "Uncontrolled components in React are form elements where the value is handled by the DOM itself rather than React state. Instead of binding the value to state, you can access the value using a reference (`useRef`) to the DOM element."
+            },
+            {
+                "id": 98,
+                "question": "Q98. What are the differences between controlled and uncontrolled components?",
+                "answer": "The key differences are: In controlled components, the form element's value is controlled by React state, while in uncontrolled components, the DOM itself handles the value. Controlled components provide more predictable behavior and are easier to validate and update, while uncontrolled components are simpler but less flexible."
+            },
+            {
+                "id": 99,
+                "question": "Q99. Which one is better: controlled or uncontrolled components?",
+                "answer": "Controlled components are generally better for most use cases, as they provide more predictable behavior and easy access to state for validation and manipulation. Uncontrolled components can be more performant and simpler for specific scenarios, such as when minimal interaction with form elements is needed."
+            },
+            {
+                "id": 100,
+                "question": "Q100. How do you convert an uncontrolled component to a controlled one?",
+                "answer": "To convert an uncontrolled component to a controlled one, you would replace the DOM reference (`useRef`) with React state and bind the value of the form element to the state. You would also update the state with an event handler to manage user input."
+            },
+            {
+                "id": 101,
+                "question": "Q101. What is the role of `useRef` in uncontrolled components?",
+                "answer": "In uncontrolled components, `useRef` is used to create a reference to the DOM element, which allows direct manipulation and access to its value. This eliminates the need for React state, making the component simpler and more efficient when you don't need to track the value of the form element in the state."
+            },
+            {
+                "id": 102,
+                "question": "Q102. How does event handling work in React?",
+                "answer": "In React, event handling works by defining event handler functions that are triggered when events such as clicks, inputs, or form submissions occur. React uses a declarative approach, where you pass event handler functions as props to elements, and React takes care of handling the events."
+            },
+            {
+                "id": 103,
+                "question": "Q103. What is the difference between React’s synthetic events and native events?",
+                "answer": "React's synthetic events are a cross-browser wrapper around the browser's native events. They normalize the events so that they behave consistently across different browsers. Native events are the standard browser events like `click`, `submit`, and `keydown`, which are handled directly by the browser."
+            },
+            {
+                "id": 104,
+                "question": "Q104. How do you pass additional parameters in an event handler?",
+                "answer": "To pass additional parameters in an event handler, you can use an anonymous function or an arrow function within the event handler. For example: `<button onClick={(e) => handleClick(e, additionalParam)}>Click me</button>`."
+            },
+            {
+                "id": 105,
+                "question": "Q105. What is the purpose of preventDefault and stopPropagation?",
+                "answer": "`preventDefault` is used to prevent the default action associated with an event, such as preventing form submission or preventing a link from navigating. `stopPropagation` is used to stop the event from propagating (bubbling) up to parent elements, preventing parent event handlers from being triggered."
+            },
+            {
+                "id": 106,
+                "question": "Q106. How do you handle events in functional vs. class components?",
+                "answer": "In functional components, events are handled using functions defined within the component and passed as props to elements. In class components, event handlers are typically methods of the class, bound to the component's instance. In both cases, React provides an `on<Event>` syntax for event handling."
+            },
+            {
+                "id": 107,
+                "question": "Q107. What is prop drilling in React?",
+                "answer": "Prop drilling is the process of passing data from a parent component down to child components through multiple layers of intermediate components. This can make the code harder to maintain, especially when the data needs to be passed through many components that do not need to use the data themselves."
+            },
+            {
+                "id": 108,
+                "question": "Q108. What are the downsides of prop drilling?",
+                "answer": "The downsides of prop drilling include making the code harder to maintain and understand, as you need to pass props through many layers of components, even if the intermediate components don't need the data. This can lead to unnecessary re-renders and make managing state across components more difficult."
+            },
+            {
+                "id": 109,
+                "question": "Q109. How do you avoid prop drilling in React?",
+                "answer": "You can avoid prop drilling by using state management solutions like React Context API or third-party libraries such as Redux or Zustand. These tools allow you to share state globally across components without needing to pass it through each level of the component tree."
+            },
+            {
+                "id": 110,
+                "question": "Q110. What are some alternatives to prop drilling besides Context API?",
+                "answer": "Some alternatives to prop drilling besides Context API include using state management libraries like Redux, Zustand, or Recoil, or leveraging hooks like `useReducer` or custom hooks to manage state locally or across multiple components without needing to pass props through intermediate levels."
+            },
+            {
+                "id": 111,
+                "question": "Q111. How do you render a list of items in React?",
+                "answer": "To render a list of items in React, you use the `map` function to iterate over an array and return a JSX element for each item. For example: `items.map(item => <li key={item.id}>{item.name}</li>)`."
+            },
+            {
+                "id": 112,
+                "question": "Q112. Why is the key prop necessary in React lists?",
+                "answer": "The `key` prop is necessary in React lists to help React identify which items have changed, been added, or removed. It improves the efficiency of the rendering process by enabling React to update only the items that have changed rather than re-rendering the entire list."
+            },
+            {
+                "id": 113,
+                "question": "Q113. What happens if you don’t use a unique key prop?",
+                "answer": "If you don’t use a unique key prop, React will have difficulty efficiently re-rendering and reconciling the list, which can lead to incorrect behavior, such as items being displayed in the wrong order, or inefficient updates."
+            },
+            {
+                "id": 114,
+                "question": "Q114. Why should you avoid using the array index as a key?",
+                "answer": "Using the array index as a key should be avoided because if the order of the items changes, the key will remain the same, leading to unexpected behavior. React relies on keys to optimize re-renders, and using array indices can break this optimization."
+            },
+            {
+                "id": 115,
+                "question": "Q115. What are common pitfalls when working with lists in React?",
+                "answer": "Common pitfalls when working with lists in React include not providing unique keys, rendering non-primitive values as keys (like objects), rendering large lists without optimization techniques like pagination or lazy loading, and failing to handle updates or deletions correctly."
+            },
+            {
+                "id": 116,
+                "question": "Q116. What are error boundaries in React?",
+                "answer": "Error boundaries are components in React that catch JavaScript errors anywhere in the component tree, log those errors, and display a fallback UI instead of crashing the entire component tree. They provide a way to handle errors gracefully and ensure that the rest of the application remains functional."
+            },
+            {
+                "id": 117,
+                "question": "Q117. Which lifecycle methods are used for error boundaries?",
+                "answer": "Error boundaries use the lifecycle methods `static getDerivedStateFromError()` and `componentDidCatch()`. `getDerivedStateFromError()` is used to render a fallback UI when an error is thrown, and `componentDidCatch()` is used to log the error details."
+            },
+            {
+                "id": 118,
+                "question": "Q118. Can functional components be error boundaries?",
+                "answer": "No, error boundaries in React cannot be implemented using functional components directly. They must be class components, as React requires `getDerivedStateFromError()` and `componentDidCatch()` methods, which are not available in functional components."
+            },
+            {
+                "id": 119,
+                "question": "Q119. What types of errors can error boundaries catch?",
+                "answer": "Error boundaries can catch JavaScript errors in the component tree, such as errors during rendering, in lifecycle methods, and in constructors of the whole tree below the error boundary. They cannot catch errors in event handlers, asynchronous code, or errors in the error boundary itself."
+            },
+            {
+                "id": 120,
+                "question": "Q120. What are the limitations of error boundaries?",
+                "answer": "Error boundaries cannot catch errors inside event handlers, asynchronous code (such as setTimeout, promises), or errors in the error boundary itself. Additionally, they do not catch errors that occur in the root component or in code outside the React component tree."
+            },
+            {
+                "id": 121,
+                "question": "Q121. How do you create an error boundary in React?",
+                "answer": "To create an error boundary, you define a class component that implements `getDerivedStateFromError()` to display a fallback UI and `componentDidCatch()` to log the error. Example: \n```class ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { hasError: false };\n  }\n  static getDerivedStateFromError(error) {\n    return { hasError: true };\n  }\n  componentDidCatch(error, info) {\n    logErrorToMyService(error, info);\n  }\n  render() {\n    if (this.state.hasError) {\n      return <h1>Something went wrong.</h1>;\n    }\n    return this.props.children;\n  }\n}```"
+            },
+            {
+                "id": 122,
+                "question": "Q122. When should you use an error boundary in React?",
+                "answer": "You should use error boundaries in React when you want to handle unexpected errors gracefully and provide a fallback UI without crashing the entire application. They are particularly useful for large applications or critical sections where it’s important to keep the UI operational even if part of it fails."
+            },
+            {
+                "id": 123,
+                "question": "Q123. How can you handle errors in functional components if error boundaries are class-based?",
+                "answer": "In functional components, you can use hooks like `useEffect` to handle errors locally, or use external libraries that support error boundaries in functional components, such as `react-error-boundary`. However, for global error handling, class-based error boundaries are still necessary."
+            },
+            {
+                "id": 124,
+                "question": "Q124. What is React Router?",
+                "answer": "React Router is a standard library used for routing in React applications. It enables navigation between different components and views based on the URL, allowing for the creation of single-page applications with multiple routes without reloading the page."
+            },
+            {
+                "id": 125,
+                "question": "Q125. What are the key components of React Router?",
+                "answer": "The key components of React Router include: \n1. `BrowserRouter` or `HashRouter` - Wraps the entire application to enable routing. \n2. `Route` - Defines the mapping between a URL path and a component. \n3. `Link` and `NavLink` - Enable navigation between routes. \n4. `Outlet` - A placeholder for nested routes. \n5. `Navigate` - Redirects to a different route."
+            },
+            {
+                "id": 126,
+                "question": "Q126. What is the difference between BrowserRouter and HashRouter?",
+                "answer": "The main difference is that `BrowserRouter` uses the HTML5 History API to manipulate the browser’s history, creating clean URLs (e.g., `/about`). `HashRouter`, on the other hand, uses the URL hash (e.g., `/#/about`), which is more suitable for older browsers or environments where the History API is not supported."
+            },
+            {
+                "id": 127,
+                "question": "Q127. How does routing work in React Router v6?",
+                "answer": "In React Router v6, routing is handled by using the `Routes` component, which replaces the `Switch` component used in previous versions. Routes are defined inside the `Routes` component using the `Route` component. React Router v6 also introduces features like nested routes, improved route matching, and the `useNavigate` hook."
+            },
+            {
+                "id": 128,
+                "question": "Q128. How can you pass data between routes?",
+                "answer": "Data can be passed between routes in React Router using the `state` prop in the `Navigate` component or by passing parameters via the URL (e.g., `/user/:id`). You can also use React's context or global state management solutions like Redux to pass data between routes."
+            },
+            {
+                "id": 129,
+                "question": "Q129. What is the useNavigate hook?",
+                "answer": "The `useNavigate` hook in React Router v6 allows you to programmatically navigate between routes. It returns a function that you can call with a path to redirect the user to another route. For example: `const navigate = useNavigate(); navigate('/home');`."
+            },
+            {
+                "id": 130,
+                "question": "Q130. What is the difference between Link and NavLink?",
+                "answer": "Both `Link` and `NavLink` are used to navigate between routes in React Router. The key difference is that `NavLink` is designed for navigation links that need styling when they are active. It adds an `active` class to the link when it matches the current URL, allowing you to style active routes differently."
+            },
+            {
+                "id": 131,
+                "question": "Q131. How do you handle dynamic routing in React Router?",
+                "answer": "Dynamic routing in React Router is handled by using route parameters in the URL (e.g., `/user/:id`). The value of the parameter can be accessed using the `useParams` hook in the component that corresponds to the route. This allows you to render components dynamically based on the route parameter."
+            },
+            {
+                "id": 132,
+                "question": "Q132. What is an Outlet component in React Router?",
+                "answer": "The `Outlet` component is used for rendering nested routes in React Router v6. It serves as a placeholder where the nested route component will be rendered. For example, if you have a parent route with child routes, the child component will be rendered inside the `Outlet`."
+            },
+            {
+                "id": 133,
+                "question": "Q133. What is the purpose of the Navigate component?",
+                "answer": "The `Navigate` component is used for programmatic navigation in React Router v6. It is commonly used to redirect users to a different route automatically. For example: `<Navigate to='/home' />` will redirect the user to the `/home` route."
+            },
+            {
+                "id": 134,
+                "question": "Q134. What is the React Context API?",
+                "answer": "The React Context API is a feature that allows you to share state and props globally across your component tree without the need to pass props down manually at every level. It is often used to manage global state and avoid prop drilling."
+            },
+            {
+                "id": 135,
+                "question": "Q135. Explain its role in managing global state.",
+                "answer": "The Context API enables global state management by providing a way to pass data through the component tree without manually passing props down at each level. It allows components to access shared data (e.g., theme, user authentication, language preferences) from anywhere in the tree, making state management easier and more scalable."
+            },
+            {
+                "id": 136,
+                "question": "Q136. What are the components of the Context API?",
+                "answer": "The components of the Context API include: \n1. `createContext()` - A function used to create a context object. \n2. `Provider` - A component that provides the context value to the tree. \n3. `Consumer` - A component that allows a component to subscribe to context changes (though, in React 16.8+, `useContext` is preferred over `Consumer`)."
+            },
+            {
+                "id": 137,
+                "question": "Q137. Mention createContext, Provider, and Consumer.",
+                "answer": "1. `createContext()` is used to create a context object. It returns an object with a `Provider` and `Consumer` component. \n2. `Provider` is a component that wraps part of your app and supplies the context value to all the components within it. \n3. `Consumer` is a component that reads the current context value and subscribes to context changes (though using `useContext` is recommended for functional components)."
+            },
+            {
+                "id": 138,
+                "question": "Q138. How do you consume context in functional components?",
+                "answer": "In functional components, you consume context using the `useContext` hook. It allows you to access the context value directly without needing a `Consumer`. Example: `const value = useContext(MyContext);`."
+            },
+            {
+                "id": 139,
+                "question": "Q139. Explain using the useContext hook.",
+                "answer": "The `useContext` hook is used to consume context in functional components. It takes a context object created by `createContext()` as its argument and returns the current context value. It provides a simpler way to access context values compared to using the `Consumer` component. Example: `const theme = useContext(ThemeContext);`."
+            },
+            {
+                "id": 140,
+                "question": "Q140. What are the limitations of the Context API?",
+                "answer": "The Context API has some limitations, such as: \n1. It can cause unnecessary re-renders if the context value changes frequently. \n2. It is not designed for complex state management or performance-heavy applications. \n3. The context value should be kept simple; complex structures can lead to performance issues."
+            },
+            {
+                "id": 141,
+                "question": "Q141. Discuss issues like unnecessary re-renders and performance concerns.",
+                "answer": "One of the major issues with the Context API is unnecessary re-renders. When the context value changes, all consumers of the context are re-rendered, which can cause performance bottlenecks in large applications. This is especially true if the context value is complex or changes frequently."
+            },
+            {
+                "id": 142,
+                "question": "Q142. How do you prevent re-renders in components using Context?",
+                "answer": "To prevent unnecessary re-renders, you can: \n1. Memoize the context value using `useMemo()` to avoid recalculating the context value on every render. \n2. Use React's `React.memo()` to memoize components that consume context, preventing them from re-rendering when unnecessary. \n3. Split context into smaller, more focused contexts to limit the number of components that are affected by state changes."
+            },
+            {
+                "id": 143,
+                "question": "Q143. Discuss memoization techniques like React.memo and splitting context.",
+                "answer": "Memoization techniques such as `React.memo` and `useMemo` can optimize performance by preventing unnecessary re-renders. `React.memo()` is used to prevent re-renders of functional components if their props haven't changed. `useMemo()` is used to memoize the context value, ensuring that only components that depend on the context value are re-rendered when it changes. Additionally, splitting context into smaller contexts can help limit the scope of re-renders."
+            },
+            {
+                "id": 144,
+                "question": "Q144. Can you share multiple context values in a single component?",
+                "answer": "Yes, you can share multiple context values in a single component. You can use multiple `Context.Provider` components or combine different context values using an object or custom hook. Another option is to use multiple `useContext` hooks in a component to access different contexts."
+            },
+            {
+                "id": 145,
+                "question": "Q145. Explain how to use multiple contexts.",
+                "answer": "To use multiple contexts, you can either nest multiple `Provider` components or use the `useContext` hook multiple times to consume different contexts in a single component. For example: \n```const theme = useContext(ThemeContext);\nconst user = useContext(UserContext);``` Alternatively, you can combine the context values into a single context or use a custom hook that consumes multiple contexts."
+            },
+            {
+                "id": 146,
+                "question": "Q146. What is state management in React?",
+                "answer": "State management in React refers to the process of managing and storing the state of an application. State can be local (within a single component) or global (shared across multiple components). Efficient state management is crucial for ensuring a responsive, predictable, and maintainable application."
+            },
+            {
+                "id": 147,
+                "question": "Q147. Explain its importance in handling and sharing component state.",
+                "answer": "State management is important in React because it helps maintain a consistent and predictable UI. When components interact and share state, proper state management ensures that data flows correctly, reducing the need for complex prop-drilling or multiple event handlers. It allows components to react to state changes efficiently."
+            },
+            {
+                "id": 148,
+                "question": "Q148. What is the difference between local and global state?",
+                "answer": "Local state is specific to a single component and managed using `useState` or `useReducer`. It is typically used for handling small-scale, component-specific data. Global state, on the other hand, is shared across multiple components and requires tools like Context API, Redux, or other state management libraries to manage state at the application level."
+            },
+            {
+                "id": 149,
+                "question": "Q149. Define their roles and use cases.",
+                "answer": "Local state is used to manage data that is only relevant within a specific component, such as form inputs or toggles. Global state is used when multiple components need access to the same data, such as user authentication status, theme settings, or global UI state, requiring a centralized management solution like Redux or Context API."
+            },
+            {
+                "id": 150,
+                "question": "Q150. What are some popular state management solutions for React?",
+                "answer": "Some popular state management solutions for React include: \n1. Context API - A built-in React feature for passing global state through the component tree. \n2. Redux - A widely used library for managing global state with a central store. \n3. MobX - A reactive state management library that uses observables. \n4. Zustand - A small, fast state management library. \n5. React Query - A library for managing server-state and caching data fetched from APIs."
+            },
+            {
+                "id": 151,
+                "question": "Q151. When would you choose a global state management library over Context API?",
+                "answer": "You might choose a global state management library like Redux or MobX over Context API when you need more advanced features such as middleware (e.g., for logging, handling side effects), better scalability for large applications, improved performance optimizations, and predictable state transitions with actions and reducers."
+            },
+            {
+                "id": 152,
+                "question": "Q152. Discuss scalability, performance, and advanced features like middleware.",
+                "answer": "Global state management libraries like Redux offer advanced features such as middleware (e.g., Redux Thunk, Redux Saga) for handling asynchronous actions, side effects, and logging. These libraries are more scalable for large applications as they provide predictable state management with centralized control. Context API, while simpler, can cause performance issues with unnecessary re-renders when the context value changes frequently."
+            },
+            {
+                "id": 153,
+                "question": "Q153. How do you handle derived state in React?",
+                "answer": "Derived state refers to state that is calculated from other state or props. To handle derived state, you can use techniques like selectors or computed state. A selector is a function that computes derived data based on the store state. In React, you can also use `useMemo` to memoize derived values and avoid unnecessary recalculations."
+            },
+            {
+                "id": 154,
+                "question": "Q154. Explain techniques like selectors or computed state.",
+                "answer": "Selectors are functions that derive state by computing new values based on the current state or props. They are useful in Redux, where they can be used with `reselect` to efficiently derive and memoize values. Computed state is similar but is often used in local component state or in state management libraries to automatically calculate values from existing state and avoid redundancy."
+            },
+            {
+                "id": 155,
+                "question": "Q155. What is Redux?",
+                "answer": "Redux is a state management library for JavaScript applications, often used with React. It provides a centralized store to manage the application state, offering a predictable and consistent way to handle state changes across components."
+            },
+            {
+                "id": 156,
+                "question": "Q156. Explain it as a state management library.",
+                "answer": "As a state management library, Redux allows for centralized control of the application's state. It provides a predictable flow where actions describe changes, reducers process those changes, and the store holds the state. Redux is commonly used for large-scale applications requiring consistent, manageable state transitions."
+            },
+            {
+                "id": 157,
+                "question": "Q157. What are the core principles of Redux?",
+                "answer": "The core principles of Redux include: \n1. Single Source of Truth: The entire application state is stored in a single object (the store). \n2. State Immutability: The state is read-only, and any state changes result in new state objects. \n3. Predictable State Changes: State changes are made using actions, which are processed by pure functions called reducers."
+            },
+            {
+                "id": 158,
+                "question": "Q158. What is the Redux flow?",
+                "answer": "The Redux flow involves: \n1. Actions: Describe events that happen in the application, typically triggered by user interactions. \n2. Reducers: Pure functions that process the actions and return a new state. \n3. Store: Holds the entire application state. \n4. View: Components that render the state, typically using React."
+            },
+            {
+                "id": 159,
+                "question": "Q159. What is an action in Redux?",
+                "answer": "An action in Redux is a plain JavaScript object that describes an event in the application. It must have a `type` property, which is a string that defines the action's purpose. Actions may also contain additional data needed for state changes, often referred to as the payload."
+            },
+            {
+                "id": 160,
+                "question": "Q160. Explain its role in triggering state changes.",
+                "answer": "Actions are dispatched in Redux to trigger state changes. They communicate to the Redux store what needs to change in the state. When an action is dispatched, it is handled by the reducer to update the state accordingly."
+            },
+            {
+                "id": 161,
+                "question": "Q161. What is a reducer, and how does it work?",
+                "answer": "A reducer is a pure function in Redux that determines how the application's state changes in response to an action. It takes the current state and an action as arguments and returns a new state. Reducers must not modify the existing state directly, ensuring state immutability."
+            },
+            {
+                "id": 162,
+                "question": "Q162. Describe its role in handling state transitions.",
+                "answer": "The reducer is responsible for handling state transitions by defining how state should change in response to actions. It processes each action type and returns a new state, ensuring the application state is updated correctly and predictably."
+            },
+            {
+                "id": 163,
+                "question": "Q163. What is the purpose of the Redux store?",
+                "answer": "The Redux store holds the entire application state. It acts as the single source of truth for the application, ensuring that state is consistent across all components. The store allows components to subscribe to state changes and dispatch actions to modify the state."
+            },
+            {
+                "id": 164,
+                "question": "Q164. Discuss its role as the single source of truth.",
+                "answer": "As the single source of truth, the Redux store consolidates the application's state in one place. This makes it easier to manage, debug, and maintain state across the entire application, as all state is centrally located, and components can access it in a predictable manner."
+            },
+            {
+                "id": 165,
+                "question": "Q165. What are middleware in Redux, and why are they used?",
+                "answer": "Middleware in Redux is a function that acts as a layer between the dispatching of an action and the reducer. Middleware is used to intercept and modify actions or perform asynchronous operations before actions reach the reducer. Examples include redux-thunk and redux-saga, which handle asynchronous actions like API calls."
+            },
+            {
+                "id": 166,
+                "question": "Q166. What is the difference between redux-thunk and redux-saga?",
+                "answer": "redux-thunk is a middleware that allows you to write action creators that return a function instead of an action object, enabling the handling of asynchronous code like API calls. redux-saga, on the other hand, uses generator functions to handle side effects in a more declarative manner, providing more control and better handling of complex asynchronous flows."
+            },
+            {
+                "id": 167,
+                "question": "Q167. Compare their approaches to handling side effects.",
+                "answer": "redux-thunk allows for asynchronous actions by returning a function from action creators, which is useful for simple async tasks like fetching data. redux-saga uses generator functions to manage side effects, offering a more robust approach for complex scenarios like orchestrating multiple asynchronous actions, retry logic, or handling non-UI effects in parallel."
+            },
+            {
+                "id": 168,
+                "question": "Q168. What is Redux Toolkit (RTK)?",
+                "answer": "Redux Toolkit (RTK) is a library that provides a set of tools and best practices to simplify working with Redux. It abstracts away the boilerplate code and provides utility functions to help manage state more efficiently and with less configuration."
+            },
+            {
+                "id": 169,
+                "question": "Q169. Explain it as an abstraction layer over Redux to simplify common tasks.",
+                "answer": "Redux Toolkit serves as an abstraction layer over Redux by reducing the need to manually write actions, reducers, and types. It simplifies tasks such as state management, creating reducers, and handling async logic through utilities like `createSlice` and `createAsyncThunk`."
+            },
+            {
+                "id": 170,
+                "question": "Q170. What are the key features of Redux Toolkit?",
+                "answer": "Key features of Redux Toolkit include: \n1. `createSlice`: A utility to generate reducers and actions. \n2. `createAsyncThunk`: A utility to handle asynchronous logic. \n3. Built-in middleware for common tasks like Redux DevTools and thunk handling. \n4. Simplified configuration with `configureStore`."
+            },
+            {
+                "id": 171,
+                "question": "Q171. What is createSlice in Redux Toolkit?",
+                "answer": "`createSlice` is a function in Redux Toolkit that allows you to define both actions and reducers in a single place. It automatically generates action creators and reducer functions based on the provided slice name, initial state, and reducers, reducing the boilerplate code typically associated with Redux."
+            },
+            {
+                "id": 172,
+                "question": "Q172. Discuss how it combines actions and reducers.",
+                "answer": "`createSlice` combines actions and reducers by allowing you to define the state and the functions that modify that state together in a single slice. The action creators are automatically generated based on the reducer functions you provide, so you don't have to manually create action types or dispatch actions."
+            },
+            {
+                "id": 173,
+                "question": "Q173. What is createAsyncThunk used for?",
+                "answer": "`createAsyncThunk` is used to handle asynchronous logic in Redux Toolkit. It provides a simplified way to manage async actions, such as fetching data from an API, and automatically dispatches actions for the lifecycle of the async request (pending, fulfilled, rejected)."
+            },
+            {
+                "id": 174,
+                "question": "Q174. Explain how it simplifies async logic.",
+                "answer": "`createAsyncThunk` simplifies async logic by automatically dispatching lifecycle actions like `pending`, `fulfilled`, and `rejected` based on the status of an asynchronous operation. It abstracts away the need for managing multiple actions and reducers for each state change during an async call."
+            },
+            {
+                "id": 175,
+                "question": "Q175. What is the difference between Redux and Redux Toolkit?",
+                "answer": "Redux Toolkit simplifies Redux by reducing the amount of boilerplate code needed to set up actions, reducers, and the store. It improves the developer experience by providing utilities like `createSlice` and `createAsyncThunk`, whereas in traditional Redux, developers need to manually write action types, creators, and reducers."
+            },
+            {
+                "id": 176,
+                "question": "Q176. Compare boilerplate reduction and developer experience improvements.",
+                "answer": "Redux Toolkit significantly reduces the boilerplate code needed for Redux. `createSlice` combines actions and reducers, eliminating the need for action type constants and manual dispatching. Additionally, `createAsyncThunk` simplifies async operations. These improvements lead to faster development and less complex code, improving overall developer experience."
+            },
+            {
+                "id": 177,
+                "question": "Q177. How does Redux Toolkit handle immutability?",
+                "answer": "Redux Toolkit uses Immer under the hood to handle immutability. Immer allows you to write 'mutating' code in reducers (e.g., using `state.push()` or `state.someProperty = value`), but it actually applies these changes immutably, ensuring the state remains consistent and not directly mutated."
+            },
+            {
+                "id": 178,
+                "question": "Q178. Discuss the use of Immer under the hood.",
+                "answer": "Immer is a library used by Redux Toolkit to handle immutable updates in reducers. It allows you to write mutable-looking code that modifies state, but under the hood, Immer produces a new, immutable state. This makes working with Redux simpler and more intuitive, without requiring manual deep copies of objects."
+            },
+            {
+                "id": 179,
+                "question": "Q179. What is React Query?",
+                "answer": "React Query is a data-fetching library that simplifies managing server state in React applications. It provides tools to fetch, cache, synchronize, and update data, making it easier to work with remote data in React applications."
+            },
+            {
+                "id": 180,
+                "question": "Q180. Explain its role in managing server state.",
+                "answer": "React Query manages server state by providing a set of hooks like `useQuery` and `useMutation` that handle data fetching, caching, and synchronization with the server. It abstracts away manual state management for server data, helping developers focus on the UI."
+            },
+            {
+                "id": 181,
+                "question": "Q181. How is React Query different from Redux?",
+                "answer": "React Query focuses on managing server state, whereas Redux is a global state management library for any type of state. React Query automatically handles caching, background updates, and synchronization with the server, while Redux requires more manual setup and doesn't provide built-in support for server state management."
+            },
+            {
+                "id": 182,
+                "question": "Q182. Compare server state (React Query) vs. global state (Redux).",
+                "answer": "Server state (React Query) refers to data fetched from the server that may be cached, refetched, and synchronized, while global state (Redux) is used to manage local app state across components. React Query simplifies handling server data by providing caching and automatic refetching, whereas Redux focuses on managing more generalized state like UI state or user preferences."
+            },
+            {
+                "id": 183,
+                "question": "Q183. What are the core features of React Query?",
+                "answer": "Core features of React Query include automatic data caching, background refetching, support for pagination and infinite scrolling, automatic retries, and handling of server-side data synchronization. It also provides hooks like `useQuery` and `useMutation` for fetching and manipulating server data."
+            },
+            {
+                "id": 184,
+                "question": "Q184. Mention caching, refetching, and background updates.",
+                "answer": "React Query automatically caches the fetched data, and it supports background refetching to ensure the data is kept up-to-date. When a component using `useQuery` is mounted, it checks the cache and fetches the data in the background to provide fresh data to the UI."
+            },
+            {
+                "id": 185,
+                "question": "Q185. What is a query key in React Query?",
+                "answer": "A query key in React Query is a unique identifier used to store and retrieve cached data. It can be a string or an array that represents the query, and React Query uses it to track the cache for a specific resource or API request."
+            },
+            {
+                "id": 186,
+                "question": "Q186. Explain how it identifies cached data.",
+                "answer": "React Query identifies cached data using the query key. Each query has a unique key, and when you make a request with that key, React Query checks if the data is already cached. If the data exists, it uses the cached version; otherwise, it fetches the data from the server."
+            },
+            {
+                "id": 187,
+                "question": "Q187. How do you fetch data using React Query?",
+                "answer": "You can fetch data using the `useQuery` hook in React Query. The `useQuery` hook requires a query key and a function to fetch the data. React Query handles caching, background refetching, and error handling automatically."
+            },
+            {
+                "id": 188,
+                "question": "Q188. Discuss using the useQuery hook.",
+                "answer": "The `useQuery` hook is used to fetch and manage server state in React Query. It takes a query key and a query function that fetches the data. `useQuery` provides information like loading state, error state, and the actual data, along with automatic caching and refetching."
+            },
+            {
+                "id": 189,
+                "question": "Q189. What is the purpose of useMutation in React Query?",
+                "answer": "The `useMutation` hook in React Query is used for creating, updating, or deleting data on the server. Unlike `useQuery`, which is for fetching data, `useMutation` is used to trigger mutations that modify server state."
+            },
+            {
+                "id": 190,
+                "question": "Q190. Describe how it handles creating, updating, or deleting server data.",
+                "answer": "`useMutation` handles server data modifications by providing functions to perform mutations, such as POST, PUT, or DELETE requests. It also provides hooks for tracking the mutation's status, handling errors, and updating the cache after a successful mutation."
+            },
+            {
+                "id": 191,
+                "question": "Q191. What is the difference between useQuery and useMutation?",
+                "answer": "`useQuery` is used to fetch and manage server data, providing automatic caching, refetching, and state management for read operations. On the other hand, `useMutation` is used for modifying server data, such as creating, updating, or deleting resources, and it doesn't involve caching."
+            },
+            {
+                "id": 192,
+                "question": "Q192. Compare their use cases.",
+                "answer": "`useQuery` is used for fetching data and is ideal for read operations that need to be cached and synchronized. `useMutation` is used for write operations, such as creating, updating, or deleting data, and is used when performing side-effect actions on the server."
+            },
+            {
+                "id": 193,
+                "question": "Q193. How does React Query handle stale data?",
+                "answer": "React Query handles stale data through the concepts of `staleTime` and `cacheTime`. When data becomes stale (based on the `staleTime` configuration), React Query automatically refetches the data in the background, ensuring the UI has the latest data."
+            },
+            {
+                "id": 194,
+                "question": "Q194. Explain the concept of stale time and cache time.",
+                "answer": "`staleTime` defines how long the data is considered fresh and prevents it from being refetched. Once the `staleTime` is exceeded, the data becomes stale and will be refetched if needed. `cacheTime` determines how long the data remains in memory after it becomes inactive (unmounted or unused)."
+            },
+            {
+                "id": 195,
+                "question": "Q195. What are the benefits of React Query's background refetching?",
+                "answer": "Background refetching ensures that the data is always up-to-date without interrupting the user experience. React Query fetches data in the background when components mount, ensuring fresh data is available as soon as the component is rendered, improving the UX."
+            },
+            {
+                "id": 196,
+                "question": "Q196. Discuss user experience improvements.",
+                "answer": "By automatically caching data, performing background refetching, and handling loading/error states efficiently, React Query improves user experience by ensuring data consistency without interrupting the UI. It reduces unnecessary re-renders and provides smooth transitions in the app."
+            },
+            {
+                "id": 197,
+                "question": "Q197. How do you handle optimistic updates in React Query?",
+                "answer": "Optimistic updates can be handled in React Query by using the `onMutate`, `onError`, and `onSuccess` callbacks. These callbacks allow you to update the UI before the mutation succeeds (optimistic update), roll back changes if an error occurs, and update the cache after a successful mutation."
+            },
+            {
+                "id": 198,
+                "question": "Q198. Provide an example using onMutate and onError.",
+                "answer": "In an optimistic update scenario, you can use `onMutate` to temporarily update the UI before the mutation completes. If the mutation fails, `onError` is called to revert the UI back to its original state. Example:\n```js\nconst mutation = useMutation(mutateData, {\n  onMutate: (variables) => {\n    // Optimistically update UI\n  },\n  onError: (error, variables, context) => {\n    // Rollback UI changes on error\n  },\n});\n```"
+            },
+            {
+                "id": 199,
+                "question": "Q199. How would you implement nested routing using React Router?",
+                "answer": "To implement nested routing in React Router, you can use the `Outlet` component to define where nested routes will be rendered inside a parent route. You would configure the parent route using `<Route>` and then define child routes inside the parent component using the `children` prop. For example:\n```jsx\n<Route path='/parent' element={<Parent />}> \n  <Route path='child' element={<Child />} /> \n</Route>\n```"
+            },
+            {
+                "id": 200,
+                "question": "Q200. How do you share state between unrelated components in React?",
+                "answer": "To share state between unrelated components in React, you can use state management solutions like Context API, Redux, or Zustand. These allow components that do not have a direct parent-child relationship to access shared state. Context API is often the easiest solution for smaller applications, while Redux is used for larger, more complex state management."
+            },
+            {
+                "id": 201,
+                "question": "Q201. How would you integrate Redux Toolkit in an existing React project?",
+                "answer": "To integrate Redux Toolkit into an existing React project, follow these steps:\n1. Install Redux Toolkit and React-Redux.\n2. Create a `store.js` file using `configureStore` from Redux Toolkit.\n3. Define slices using `createSlice` for each piece of state.\n4. Wrap your app in a `<Provider>` component and pass the Redux store.\n5. Use `useDispatch` and `useSelector` hooks to interact with the state inside components."
+            },
+            {
+                "id": 202,
+                "question": "Q202. What is the difference between local state and global state management?",
+                "answer": "Local state refers to data that is managed within a single component and used only within that component. Global state, on the other hand, is data that is shared across multiple components in an application. While local state is suitable for component-specific data, global state is used for data that needs to be accessed or modified by multiple components, typically managed with tools like Context API, Redux, or Zustand."
+            },
+            {
+                "id": 203,
+                "question": "Q203. How do you handle caching and refetching in React Query?",
+                "answer": "React Query handles caching automatically. When data is fetched, it is stored in memory, and subsequent requests for the same data are served from the cache. You can control caching behavior using `staleTime` (how long data is considered fresh) and `cacheTime` (how long data stays in the cache). Refetching can be done automatically by React Query when the data becomes stale or can be triggered manually using `refetch` from the `useQuery` hook. You can also configure background refetching to keep data up-to-date without blocking the UI."
+            },
+            {
+                "id": 204,
+                "question": "Q204. What are React Hooks?",
+                "answer": "React Hooks are functions that let you use state and other React features in functional components. They allow you to use lifecycle methods, manage state, and handle side effects in a simpler way compared to class components."
+            },
+            {
+                "id": 205,
+                "question": "Q205. Explain how hooks let you use state and lifecycle features in functional components.",
+                "answer": "Hooks like `useState` and `useEffect` allow functional components to manage state and perform side effects (like data fetching, subscriptions, or DOM manipulation) without needing class-based components or lifecycle methods."
+            },
+            {
+                "id": 206,
+                "question": "Q206. Why were React Hooks introduced?",
+                "answer": "React Hooks were introduced to simplify the code, improve reusability, and allow functional components to manage state and lifecycle features, making the code more readable and easier to test."
+            },
+            {
+                "id": 207,
+                "question": "Q207. Discuss the limitations of class components, like complex lifecycle methods and lack of code reusability, that hooks solve.",
+                "answer": "Class components were complex due to lengthy lifecycle methods and lack of reusability. Hooks solve these issues by allowing state and lifecycle methods to be used in a more modular and reusable way in functional components."
+            },
+            {
+                "id": 208,
+                "question": "Q208. Can you use React Hooks in class components?",
+                "answer": "No, React Hooks are exclusively designed for functional components. Class components do not support hooks, as they rely on the `this` keyword and lifecycle methods instead."
+            },
+            {
+                "id": 209,
+                "question": "Q209. Explain why hooks are exclusive to functional components.",
+                "answer": "Hooks are exclusive to functional components because they provide a simpler, more concise way to manage state and side effects in React. Functional components are more lightweight and easier to understand than class components, and hooks allow them to achieve the same features."
+            },
+            {
+                "id": 210,
+                "question": "Q210. What are the rules of hooks?",
+                "answer": "The rules of hooks are: (1) Only call hooks at the top level, (2) Only call hooks from React functional components or custom hooks, and (3) Do not call hooks conditionally or inside loops."
+            },
+            {
+                "id": 211,
+                "question": "Q211. List some commonly used React Hooks.",
+                "answer": "Commonly used React hooks include: `useState`, `useEffect`, `useContext`, `useRef`, `useMemo`, and `useCallback`."
+            },
+            {
+                "id": 212,
+                "question": "Q212. What is useState, and how do you use it?",
+                "answer": "`useState` is a hook used to manage state in functional components. You can use it by calling `const [state, setState] = useState(initialState)` where `state` is the current state, and `setState` is a function to update the state."
+            },
+            {
+                "id": 213,
+                "question": "Q213. How does useState work internally?",
+                "answer": "Internally, React keeps track of the state variable and updates it when `setState` is called. It re-renders the component with the new state values, and React ensures that the component re-renders only when the state changes."
+            },
+            {
+                "id": 214,
+                "question": "Q214. How do you update state based on the previous state in useState?",
+                "answer": "To update state based on the previous state, you can use the functional updater pattern: `setState((prevState) => prevState + 1)` to ensure you get the correct value even when state updates are asynchronous."
+            },
+            {
+                "id": 215,
+                "question": "Q215. Can you use multiple useState calls in a single component?",
+                "answer": "Yes, you can use multiple `useState` calls in a single component. React does not restrict the number of `useState` hooks, so each state can be managed independently."
+            },
+            {
+                "id": 216,
+                "question": "Q216. What are common pitfalls when using useState?",
+                "answer": "Common pitfalls include stale state values, especially when relying on state updates in asynchronous code, and overcomplicating state updates by making them dependent on too many variables."
+            },
+            {
+                "id": 217,
+                "question": "Q217. What is useEffect, and why is it used?",
+                "answer": "`useEffect` is a hook used to perform side effects like data fetching, subscriptions, or updating the DOM in functional components. It is similar to lifecycle methods in class components such as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`."
+            },
+            {
+                "id": 218,
+                "question": "Q218. How does useEffect differ from lifecycle methods in class components?",
+                "answer": "`useEffect` combines the behavior of `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` from class components into a single API, making it easier to manage side effects in functional components."
+            },
+            {
+                "id": 219,
+                "question": "Q219. What is the second parameter of useEffect, and how does it work?",
+                "answer": "The second parameter of `useEffect` is the dependency array. It tells React when to run the effect: if it’s empty (`[]`), the effect runs once on mount and never again. If it contains variables, the effect runs whenever those variables change."
+            },
+            {
+                "id": 220,
+                "question": "Q220. What happens if you omit the dependency array in useEffect?",
+                "answer": "If you omit the dependency array in `useEffect`, the effect will run after every render, which can cause performance issues, especially for costly side effects like data fetching."
+            },
+            {
+                "id": 221,
+                "question": "Q221. How do you clean up side effects in useEffect?",
+                "answer": "You can clean up side effects in `useEffect` by returning a cleanup function, which React calls before the next effect runs or when the component is unmounted."
+            },
+            {
+                "id": 222,
+                "question": "Q222. Can you use multiple useEffect hooks in a single component?",
+                "answer": "Yes, you can use multiple `useEffect` hooks in a single component. Each `useEffect` can handle different side effects independently."
+            },
+            {
+                "id": 223,
+                "question": "Q223. What are common use cases for useEffect?",
+                "answer": "Common use cases for `useEffect` include fetching data, setting up subscriptions, manually updating the DOM, managing timers, and cleaning up side effects."
+            },
+            {
+                "id": 224,
+                "question": "Q224. What is useContext, and when should you use it?",
+                "answer": "`useContext` is a hook that allows you to consume context values in functional components without needing to use the `Consumer` component. It is useful for sharing global state like theme, user authentication, etc."
+            },
+            {
+                "id": 225,
+                "question": "Q225. How does useContext work with React’s Context API?",
+                "answer": "`useContext` works with React’s Context API to consume context values. You first create a context using `React.createContext()`, wrap your component tree in a `Provider`, and then use `useContext` to access the context values in any functional component."
+            },
+            {
+                "id": 226,
+                "question": "Q226. What are the limitations of useContext?",
+                "answer": "One limitation of `useContext` is that it can cause unnecessary re-renders when the context value changes, especially if the context is used by many components."
+            },
+            {
+                "id": 227,
+                "question": "Q227. What is useRef, and what are its use cases?",
+                "answer": "`useRef` is a hook that creates a mutable reference that persists across renders. It is commonly used for accessing DOM elements directly and managing values that don't require a re-render when updated."
+            },
+            {
+                "id": 228,
+                "question": "Q228. Describe how it creates a mutable reference to store a value or DOM element.",
+                "answer": "`useRef` returns an object with a `current` property that can be assigned a DOM element or a value. The reference persists across renders, but changing it does not trigger a re-render."
+            },
+            {
+                "id": 229,
+                "question": "Q229. What is the difference between useRef and createRef?",
+                "answer": "`useRef` is used in functional components and persists across renders, while `createRef` is used in class components and is reinitialized every time a component re-renders."
+            },
+            {
+                "id": 230,
+                "question": "Q230. How can you use useRef to manage focus or animations?",
+                "answer": "`useRef` can be used to manage focus by referencing a DOM element (e.g., `inputRef.current.focus()`). It can also be used to store mutable values like animation frames that don't require re-rendering the component."
+            },
+            {
+                "id": 231,
+                "question": "Q231. Does updating a value in useRef trigger a re-render?",
+                "answer": "No, updating the value in `useRef` does not trigger a re-render. It only updates the `current` property of the ref object, and the component continues to render normally."
+            },
+            {
+                "id": 232,
+                "question": "Q232. What is useMemo, and why is it used?",
+                "answer": "`useMemo` is a hook that memoizes the result of an expensive function call. It is used to optimize performance by recalculating values only when necessary, based on dependencies."
+            },
+            {
+                "id": 233,
+                "question": "Q233. Discuss how it memoizes expensive calculations to optimize performance.",
+                "answer": "`useMemo` caches the result of a calculation and only recomputes it when one of its dependencies changes, reducing unnecessary recalculations during re-renders."
+            },
+            {
+                "id": 234,
+                "question": "Q234. What is useCallback, and when would you use it?",
+                "answer": "`useCallback` is a hook that memoizes a function to prevent it from being recreated on each render. It is useful when passing functions to child components, to avoid unnecessary re-renders."
+            },
+            {
+                "id": 235,
+                "question": "Q235. Explain how it memoizes a function to prevent unnecessary re-creations.",
+                "answer": "`useCallback` stores a function and only recreates it when one of its dependencies changes. This prevents unnecessary function re-creations on every render."
+            },
+            {
+                "id": 236,
+                "question": "Q236. What is the difference between useMemo and useCallback?",
+                "answer": "`useMemo` memoizes a computed value, while `useCallback` memoizes a function. They both help optimize performance, but `useMemo` caches results of expensive operations, and `useCallback` ensures functions are not recreated unnecessarily."
+            },
+            {
+                "id": 237,
+                "question": "Q237. What are common pitfalls when using useMemo and useCallback?",
+                "answer": "Common pitfalls include overuse of both hooks, which may lead to unnecessary complexity, and poor dependency array management that can cause incorrect or inefficient behavior."
+            },
+            {
+                "id": 238,
+                "question": "Q238. What are custom hooks in React?",
+                "answer": "Custom hooks are JavaScript functions that encapsulate reusable logic in React. They are functions whose names start with `use` and can use other hooks inside them."
+            },
+            {
+                "id": 239,
+                "question": "Q239. Explain how they encapsulate reusable logic in functions starting with 'use'.",
+                "answer": "Custom hooks are functions that allow you to extract and reuse logic like state management, side effects, or event handling. They encapsulate complex logic to make components cleaner and more reusable."
+            },
+            {
+                "id": 240,
+                "question": "Q240. How do you create and use a custom hook?",
+                "answer": "To create a custom hook, define a function starting with `use`, and call React hooks inside it. For example, `function useFetch(url) { const [data, setData] = useState(null); useEffect(() => { fetch(url).then(response => response.json()).then(setData); }, [url]); return data; }`."
+            },
+            {
+                "id": 241,
+                "question": "Q241. What are the benefits of using custom hooks?",
+                "answer": "Custom hooks allow for better code reusability, abstraction of complex logic, and cleaner components by extracting repetitive logic into a single place."
+            },
+            {
+                "id": 242,
+                "question": "Q242. Can custom hooks use other hooks?",
+                "answer": "Yes, custom hooks can use other built-in hooks like `useState`, `useEffect`, or even other custom hooks. This enables building more complex logic in a modular and reusable way."
+            },
+            {
+                "id": 243,
+                "question": "Q243. What happens if you violate the rules of hooks?",
+                "answer": "Violating the rules of hooks results in errors like 'Invalid hook call' or React’s inability to track state updates, which causes unexpected behavior and render issues."
+            },
+            {
+                "id": 244,
+                "question": "Q244. How do you handle state and effects in server-side rendering with hooks?",
+                "answer": "In SSR, `useEffect` does not run on the server, but it runs on the client after the component mounts. `useLayoutEffect` may cause issues with SSR because it runs synchronously and depends on the DOM, which is not available on the server."
+            },
+            {
+                "id": 245,
+                "question": "Q245. How do you handle performance optimization with hooks?",
+                "answer": "You can optimize performance by using `useMemo` and `useCallback` to memoize values and functions, reducing unnecessary recalculations and re-renders. Additionally, splitting large components into smaller ones can enhance performance."
+            },
+            {
+                "id": 246,
+                "question": "Q246. What is the difference between useEffect and useLayoutEffect?",
+                "answer": "`useEffect` runs asynchronously after the paint and is suitable for side effects like data fetching or DOM manipulation. `useLayoutEffect`, on the other hand, runs synchronously after DOM mutations but before the paint, making it useful for layout adjustments or DOM reads."
+            },
+            {
+                "id": 247,
+                "question": "Q247. How would you implement infinite scrolling using hooks?",
+                "answer": "You can implement infinite scrolling by combining `useState` to manage the list of items, `useEffect` to detect when the user reaches the bottom of the page, and `useRef` to track scroll position and manage the loading state."
+            },
+            {
+                "id": 248,
+                "question": "Q248. How can you debounce or throttle with hooks?",
+                "answer": "You can debounce or throttle using `useEffect` and `setTimeout`. For debouncing, use `setTimeout` to delay the effect, and for throttling, limit the frequency of function calls using `setInterval` or a custom throttle function."
+            },
+            {
+                "id": 249,
+                "question": "Q249. What are the limitations of React Hooks?",
+                "answer": "Some limitations of React Hooks include difficulty debugging complex hooks, managing dependencies effectively, and potential performance hits if hooks like `useMemo` or `useCallback` are overused."
+            },
+            {
+                "id": 250,
+                "question": "Q250. How do you test components using hooks?",
+                "answer": "You can test components with hooks using React Testing Library. You may need to mock hooks, such as `useState` or `useEffect`, and simulate their behavior during tests to ensure the component renders correctly."
             }
         ]
     },
