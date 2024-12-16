@@ -2887,7 +2887,7 @@
             {
                 "id": 414,
                 "question": "Q414. How do you handle forms in React?",
-                "answer": "In React, forms are typically handled using controlled components, where form elements like `input`, `textarea`, and `select` are bound to React state. When the user interacts with the form, the input value is updated in the state, and the UI reflects this change. For example: `<input type="text" value={this.state.name} onChange={e => this.setState({ name: e.target.value })} />`."
+                "answer": "In React, forms are typically handled using controlled components, where form elements like `input`, `textarea`, and `select` are bound to React state. When the user interacts with the form, the input value is updated in the state, and the UI reflects this change. For example: `<input type=`text` value={this.state.name} onChange={e => this.setState({ name: e.target.value })} />`."
             },
             {
                 "id": 415,

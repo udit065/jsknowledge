@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../sidebar/Sidebar';
 
 const Javascript = () => {
     const [jsQuestions, setJsQuestions] = useState([]);
@@ -18,10 +17,7 @@ const Javascript = () => {
 
     return (
         <div className='bg-black text-white min-h-screen'>
-            <div>
-                <Sidebar />
-            </div>
-            <div className='ml-80 pt-10'>
+            <div className='ml-4 md:ml-20 pt-10'>
                 {jsQuestions.map((questionObj) => (
                     <div key={questionObj.id}>
                         <h2 className='font-bold text-2xl'>{questionObj.question}</h2>
