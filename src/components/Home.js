@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Home = () => {
-    const data = ["Javascript", "React", "HTML", "CSS"];
-    const path = ["/javascript", "/react", "/html", "/css"];
+    const data = ["Javascript", "React", "Output Based Questions", "HTML", "CSS"];
+    const path = ["/javascript", "/react","/output-based-question", "/html", "/css"];
 
     return (
         <div className="bg-black text-white min-w-screen min-h-screen">

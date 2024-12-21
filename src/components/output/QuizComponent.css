@@ -1,0 +1,147 @@
+/* QuizComponent.css */
+.quiz-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.code-section {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.code-block {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  color: #333;
+}
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.options li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.options li:hover {
+  background-color: #f0f0f0;
+}
+
+.show-answer-button,
+.answer-section p {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.show-answer-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.show-answer-button:hover {
+  background-color: #218838;
+}
+
+.answer-section {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.answer-section p {
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 10px;
+  }
+
+  .copy-button {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+
+  .options li {
+    font-size: 0.9rem;
+  }
+
+  .show-answer-button {
+    font-size: 0.9rem;
+  }
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.prev-button,
+.next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev-button:disabled,
+.next-button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.prev-button:hover:not(:disabled),
+.next-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
