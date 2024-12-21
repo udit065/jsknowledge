@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "category": "JavaScript Basics",
+        "questions": [
+            {
+                "id": 101,
+                "question": "function sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = 'Lydia';\n  let age = 21;\n}\nsayHi();",
+                "options": [
+                    "A: Lydia and undefined",
+                    "B: Lydia and ReferenceError",
+                    "C: ReferenceError and 21",
+                    "D: undefined and ReferenceError"
+                ],
+                "answer": "D: undefined and ReferenceError",
+                "explanation": "Variables declared with `var` are hoisted and initialized to `undefined` until the code execution reaches the declaration. However, `let` and `const` variables are hoisted but not initialized, and accessing them before the declaration causes a `ReferenceError`. Thus, `name` is `undefined`, and `age` throws a `ReferenceError`."
+            },
+            {
+                "id": 102,
+                "question": "let text = 'abcde';\ntext[1] = 'z';\nconsole.log(text);",
+                "options": [
+                    "A: z",
+                    "B: zbcde",
+                    "C: abcde",
+                    "D: undefined"
+                ],
+                "answer": "C: abcde",
+                "explanation": "Strings in JavaScript are immutable. Attempting to modify a specific character in a string does nothing. Here, `text[1] = 'z'` is ignored, so `console.log(text)` outputs the original string, 'abcde'."
+            },
+            {
+                "id": 103,
+                "question": "const shape = {\n  radius: 10,\n  diameter() {\n    return this.radius * 2;\n  },\n  perimeter: () => 2 * Math.PI * this.radius,\n};\n\nconsole.log(shape.diameter());\nconsole.log(shape.perimeter());",
+                "options": [
+                    "A: 20 and 62.83185307179586",
+                    "B: 20 and NaN",
+                    "C: 20 and 63",
+                    "D: NaN and 63"
+                ],
+                "answer": "B: 20 and NaN",
+                "explanation": "Note that the value of `diameter` is a regular function, whereas the value of `perimeter` is an arrow function. With arrow functions, the `this` keyword refers to its current surrounding scope, unlike regular functions! This means that when we call `perimeter`, it doesn't refer to the `shape` object, but to its surrounding scope (e.g., `window`). Since there is no value `radius` in the scope of the arrow function, `this.radius` returns `undefined` which, when multiplied by `2 * Math.PI`, results in `NaN`."
+            }
+        ]
+    }
+]
